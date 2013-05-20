@@ -17,9 +17,6 @@ DEFAULT_FROM_EMAIL = 'sendmail@localhost'
 # Misc
 PREPEND_WWW = True
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = ''
-
 # Cache
 CACHES = {
     #    'default': {
