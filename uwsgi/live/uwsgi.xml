@@ -17,17 +17,17 @@
   <module>django_wsgi</module>
 
   <!-- reload server after touching that file -->
-  <touch-reload>/home/notch/sites/ironika-fondstamp-live/uwsgi/live/django_wsgi.py</touch-reload>
+  <touch-reload>/opt/django/sites/ironika-fondstamp-live/uwsgi/live/django_wsgi.py</touch-reload>
 
   <!-- setup python environment -->
   <autoload/>
   <plugins>python</plugins>
-  <pythonpath>/home/notch/sites/ironika-fondstamp-live</pythonpath>
-  <pythonpath>/home/notch/sites/ironika-fondstamp-live/uwsgi/live</pythonpath>
-  <pythonpath>/home/notch/virtualenvs/ironika-fondstamp-live/lib/python2.7/site-packages</pythonpath>
+  <pythonpath>/opt/django/sites/ironika-fondstamp-live</pythonpath>
+  <pythonpath>/opt/django/sites/ironika-fondstamp-live/uwsgi/live</pythonpath>
+  <pythonpath>/opt/django/virtualenvs/ironika-fondstamp-live/lib/python2.7/site-packages</pythonpath>
 
   <!-- use virtualenv -->
-  <pyhome>/home/notch/virtualenvs/ironika-fondstamp/</pyhome>
+  <pyhome>/opt/django/virtualenvs/ironika-fondstamp/</pyhome>
 
 
   <!-- Number of processes. Set this to number of cpus not cores -->
