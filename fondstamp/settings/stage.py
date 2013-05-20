@@ -19,10 +19,10 @@ PREPEND_WWW = True
 
 # Cache
 CACHES = {
-    #    'default': {
-#        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-#    }
-    }
+        'default': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+		}
+}
 
 # Database
 DATABASES = {
