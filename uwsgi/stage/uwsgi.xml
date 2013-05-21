@@ -27,7 +27,7 @@
   <pythonpath>/opt/django/virtualenvs/ironika-fondstamp-stage/lib/python2.7/site-packages</pythonpath>
 
   <!-- use virtualenv -->
-  <pyhome>/opt/django/virtualenvs/ironika-fondstamp/</pyhome>
+  <pyhome>/opt/django/virtualenvs/ironika-fondstamp-stage/</pyhome>
 
 
   <!-- Number of processes. Set this to number of cpus not cores -->
