@@ -13,9 +13,6 @@
   <!-- restart the server after x seconds of inactivity -->
   <inactivity>300</inactivity>
 
-  <!-- name of wsgi app file -->
-  <module>django_wsgi</module>
-
   <!-- reload server after touching that file -->
   <touch-reload>/opt/django/sites/ironika-fondstamp-live/uwsgi/live/django_wsgi.py</touch-reload>
 
@@ -29,6 +26,8 @@
   <!-- use virtualenv -->
   <pyhome>/opt/django/virtualenvs/ironika-fondstamp-live/</pyhome>
 
+  <!-- name of wsgi app file -->
+  <module>django_wsgi</module>
 
   <!-- Number of processes. Set this to number of cpus not cores -->
   <processes>1</processes>
