@@ -10,10 +10,6 @@ from fondstamp.settings.common import *
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-# E-mail
-EMAIL_PORT = 1025
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 # Cache
 CACHES = {
         'default': {
