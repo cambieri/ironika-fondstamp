@@ -14,14 +14,6 @@ sys.path.append(PROJECT_ROOT + '/apps/')
 sys.path.append(PROJECT_ROOT + '/libs/')
 
 
-# Invio email con classe send_mail configurata con smtp google
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'sendmail@cambieri.it'
-# EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 587
-EMAIL_SUBJECT_PREFIX = '[Django - fondstamp] '
-
 # Generazione automatica SECRET_KEY
 def generate_secret_key(file_path):
 	from django.utils.crypto import get_random_string
@@ -35,6 +27,14 @@ except ImportError:
     SETTINGS_DIR = os.path.abspath(os.path.dirname(__file__))
     generate_secret_key(os.path.join(SETTINGS_DIR, 'secret_key.py'))
     from secret_key import *
+
+# Invio email con classe send_mail configurata con smtp google
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sendmail@cambieri.it'
+# EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+EMAIL_SUBJECT_PREFIX = '[Django - fondstamp] '
 
 
 DEBUG = True
