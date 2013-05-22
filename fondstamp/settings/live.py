@@ -6,7 +6,7 @@
 from fondstamp.settings.common import *
 
 # Debugging
-DEBUG = Fals
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 # Misc
