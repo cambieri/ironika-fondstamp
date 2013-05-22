@@ -9,7 +9,7 @@ from fondstamp.settings.common import *
 # Debugging
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['89.32.146.242']
 
 # Misc
 PREPEND_WWW = False
