@@ -85,10 +85,7 @@ def prepare_deploy():
         local('git checkout master')
         local('git add -A && git commit')
         local('git push')
-        local('git checkout {0} {1}'.format(
-            config[env.environment]['git']['server_name'],
-            config[env.environment]['git']['branch_name'])
-        )
+        local('git checkout {0}'.format(config[env.environment]['git']['branch_name']))
         local('git merge master')
         local('git push')
         local('git checkout master')
