@@ -6,16 +6,11 @@
 from fondstamp.settings.common import *
 
 # Debugging
-DEBUG = True
+DEBUG = Fals
 TEMPLATE_DEBUG = DEBUG
 
-# E-mail
-EMAIL_HOST = 'localhost'
-SERVER_EMAIL = 'sendmail@localhost'
-DEFAULT_FROM_EMAIL = 'sendmail@localhost'
-
 # Misc
-PREPEND_WWW = True
+PREPEND_WWW = False
 
 # Cache
 CACHES = {

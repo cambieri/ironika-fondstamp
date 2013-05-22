@@ -35,7 +35,6 @@ USE_I18N = True
 USE_L10N = True
 
 
-
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
@@ -63,24 +62,10 @@ STATICFILES_DIRS = (
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (
-        'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
     )
-
-# Generazione automatica SECRET_KEY
-def generate_secret_key(file_path):
-	from django.utils.crypto import get_random_string
-	chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
-	secret_key = get_random_string(50, chars)
-	with open(file_path, "w") as text_file:
-		text_file.write("SECRET_KEY = '%s'" % secret_key)
-try:
-    from secret_key import *
-except ImportError:
-    SETTINGS_DIR = os.path.abspath(os.path.dirname(__file__))
-    generate_secret_key(os.path.join(SETTINGS_DIR, 'secret_key.py'))
-    from secret_key import *
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -90,14 +75,14 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-        'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
     )
 
 
 MIDDLEWARE_CLASSES = (
-        'django.middleware.common.CommonMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -107,7 +92,7 @@ MIDDLEWARE_CLASSES = (
 
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-        'django.contrib.auth.context_processors.auth',
+    'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.i18n',
     'django.core.context_processors.request',
     'django.core.context_processors.static',
@@ -117,7 +102,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 
 AUTHENTICATION_BACKENDS = (
-        'django.contrib.auth.backends.ModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
     )
 
 ROOT_URLCONF = 'fondstamp.urls'
@@ -127,20 +112,19 @@ TEMPLATE_DIRS = (
     )
 
 INSTALLED_APPS = (
-        'django.contrib.auth',
+    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+
     # Le apps del progetto vanno messe prima di 'admin' per poter personalizzare i messaggi in 'locale'
     'main',
-    'django.contrib.admin',
-    
+    'django.contrib.admin',    
     'south',
 )
-
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -178,4 +162,24 @@ USE_TZ = True
 X_FRAME_OPTIONS = 'DENY'
 
 
+# Invio email con classe send_mail configurata con smtp google
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sendmail@cambieri.it'
+# EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+EMAIL_SUBJECT_PREFIX = '[Django - fondstamp] '
 
+# Generazione automatica SECRET_KEY
+def generate_secret_key(file_path):
+	from django.utils.crypto import get_random_string
+	chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+	secret_key = get_random_string(50, chars)
+	with open(file_path, "w") as text_file:
+		text_file.write("SECRET_KEY = '%s'" % secret_key)
+try:
+    from secret_key import *
+except ImportError:
+    SETTINGS_DIR = os.path.abspath(os.path.dirname(__file__))
+    generate_secret_key(os.path.join(SETTINGS_DIR, 'secret_key.py'))
+    from secret_key import *

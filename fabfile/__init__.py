@@ -61,7 +61,15 @@ def live():
     env.environment = 'live'
     env.hosts = [config[env.environment]['server']]
 
-# Fab Tasks
+### Fab Tasks
+
+def prepare_deploy():
+    with lcd('/home/workspace-django/projects/ironika-fondstamp/fondstamp'):
+		local("python2 ./manage.py test main")
+    with lcd('/home/workspace-django/projects/ironika-fondstamp'):
+		local("git add -A && git commit")
+		local("git push")
+    
 def deploy():
     """
     Deploy, migrate, collect static files, restart webserver
@@ -85,7 +93,7 @@ def install_requirements():
     _restart_webserver()
 
 
-# Helpers
+### Helpers
 
 def __activate():
     return 'export LANG=it_IT.UTF-8 && source {0}bin/activate && export DJANGO_SETTINGS_MODULE={1} && export PYTHONPATH={2}'.format(
