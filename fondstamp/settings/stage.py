@@ -3,6 +3,7 @@
 # - sites: all
 # - environments: prod
 
+import os
 from fondstamp.settings.common import *
 
 # Debugging
@@ -16,7 +17,7 @@ PREPEND_WWW = False
 CACHES = {
         'default': {
         'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-		}
+         }
 }
 
 # Database
@@ -40,3 +41,4 @@ DATABASES = {
     },
 }
 
+DEFAULT_CHARSET='utf-8'

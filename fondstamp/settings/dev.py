@@ -18,8 +18,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 CACHES = {
         'default': {
         'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-    }
-    }
+         }
+}
 
 # Database
 DATABASES = {
@@ -43,4 +43,3 @@ DATABASES = {
 }
 
 DEFAULT_CHARSET='utf-8'
-
