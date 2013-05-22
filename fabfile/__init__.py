@@ -67,8 +67,13 @@ def prepare_deploy():
     with lcd('/home/workspace-django/projects/ironika-fondstamp/fondstamp'):
 		local("python2 ./manage.py test main")
     with lcd('/home/workspace-django/projects/ironika-fondstamp'):
+		local("git checkout master")
 		local("git add -A && git commit")
 		local("git push")
+		local("git checkout live")
+		local("git merge master")
+		local("git push")
+		local("git checkout master")
     
 def deploy():
     """
