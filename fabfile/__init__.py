@@ -11,6 +11,7 @@ config = {
     'live': {
         'server': 'root@cmbhosting.no-ip.biz',
         'django': {
+            'site_name': 'ironika-fondstamp',
             'site_dir_name': 'ironika-fondstamp-live',
             'site_root': '/opt/django/sites/ironika-fondstamp-live/',
             'project_dir_name': 'fondstamp',
@@ -32,6 +33,7 @@ config = {
     'stage': {
         'server': 'root@cmbhosting.no-ip.biz',
         'django': {
+            'site_name': 'ironika-fondstamp',
             'site_dir_name': 'ironika-fondstamp-stage',
             'site_root': '/opt/django/sites/ironika-fondstamp-stage/',
             'project_dir_name': 'fondstamp',
@@ -64,19 +66,21 @@ def live():
 ### Fab Tasks
 
 def prepare_server():
-    site_name = config[env.environment]['django']['site_dir_name']
+    site_name = config[env.environment]['django']['site_name']
+    site_dir_name = config[env.environment]['django']['site_dir_name']
     site_root = config[env.environment]['django']['site_root']
     with cd('/'):
         run('mkdir -p /opt/django/virtualenvs')
         run('mkdir -p {0}'.format(site_root))
     with cd(config[env.environment]['virtualenv']['path'] + "../"):
-        run('virtualenv --no-site-packages {0}'.format(site_name))
+        run('virtualenv --no-site-packages {0}'.format(site_dir_name))
     with cd(site_root):
         run('git init')
-        run('sudo -u postgres createuser -d -R -S {0}'.format(site_name))
-        run('sudo -u postgres createdb -T template1 -O {0} {1}'.format(site_name, site_name))
-        run('ln -s {0}uwsgi/{1}/uwsgi.xml /etc/uwsgi/apps-enabled/{2}.xml'.format(site_root, env.environment, site_name))
-        run('ln -s {0}hosting/nginx/virtualhost-{1}.conf /etc/nginx/sites-enabled/{2}.conf'.format(site_root, env.environment, site_name))	
+        run('git remote add origin git@github.com:cambieri/{0}.git'.format(site_name))
+        run('sudo -u postgres createuser -d -R -S {0}'.format(site_dir_name))
+        run('sudo -u postgres createdb -T template1 -O {0} {1}'.format(site_dir_name, site_dir_name))
+        run('ln -s {0}uwsgi/{1}/uwsgi.xml /etc/uwsgi/apps-enabled/{2}.xml'.format(site_root, env.environment, site_dir_name))
+        run('ln -s {0}hosting/nginx/virtualhost-{1}.conf /etc/nginx/sites-enabled/{2}.conf'.format(site_root, env.environment, site_dir_name))	
 
 def prepare_deploy():
     with lcd('/home/workspace-django/projects/ironika-fondstamp/fondstamp'):
