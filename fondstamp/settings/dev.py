@@ -7,7 +7,7 @@ import os
 from fondstamp.settings.common import *
 
 # Debug
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 # Cache
