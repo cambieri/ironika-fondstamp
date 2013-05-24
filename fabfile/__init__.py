@@ -65,6 +65,14 @@ def live():
 
 ### Fab Tasks
 
+def prepare_south():
+    with lcd('/home/workspace-django/projects/ironika-fondstamp'):
+        run(
+            __activate() + \
+            '&& django-admin.py schemamigration main --initial && ' + \
+            __deactivate()
+        )
+
 def prepare_git():
     with lcd('/home/workspace-django/projects/ironika-fondstamp'):
         git_create_repo_param = '{"name":"ironika-fondstamp"}'
