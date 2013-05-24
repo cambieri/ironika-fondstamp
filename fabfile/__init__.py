@@ -67,11 +67,7 @@ def live():
 
 def prepare_south():
     with lcd('/home/workspace-django/projects/ironika-fondstamp'):
-        run(
-            __activate() + \
-            '&& django-admin.py schemamigration main --initial && ' + \
-            __deactivate()
-        )
+        local('django-admin.py schemamigration main --initial')
 
 def prepare_git():
     with lcd('/home/workspace-django/projects/ironika-fondstamp'):
