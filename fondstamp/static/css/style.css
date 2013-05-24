@@ -5,3 +5,71 @@ body {
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
+
+a {
+	color: #555555;
+}
+a:HOVER {
+	color: #FFCC01;
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+}
+
+.content {
+	margin: 3% 20px 0px 20px;
+}
+
+.secondary-menu a {
+	margin-right: 50px;
+}
+
+.title {
+	margin-top: 6%;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFCC01;
+}
+
+.two-columns {
+	margin-top: 6%;
+	font-size: 13px;
+	text-align: justify;
+
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2; /* Safari and Chrome */
+	column-count:2;
+	-moz-column-gap:30px; /* Firefox */
+	-webkit-column-gap:30px; /* Safari and Chrome */
+	column-gap:30px;
+}
+
+.footer {
+	background-color: black;
+	color: #DDD;
+	text-align: center;
+	font-size: 10px;
+	line-height: 24px;
+}
+
+.hidden {
+	display: none;
+}
+
+#preview {
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	border:1px solid #ccc;
+	background:#333;
+	padding:5px;
+	display:none;
+	color:#fff;
+}
+
+/* background prettyphoto */
+div.pp_default .pp_content {
+	background: #333 !important;
+}

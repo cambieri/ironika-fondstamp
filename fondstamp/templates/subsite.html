@@ -1,6 +1,91 @@
 {% extends "site_base.html" %}
 {% load i18n %}
 
+{% block css %}
+{{ block.super }}
+		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+		
+		<!-- prettyPhoto -->
+		<link href="http://cdn.jsdelivr.net/prettyphoto/3.1.5/css/prettyPhoto.css" type="text/css" rel="stylesheet" media="screen">
+		
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+{% endblock %}
+
 {% block markup %}
-    <h1>{% trans "Hello Fondstamp!" %}</h1>
+		<div class="container">
+			<div class="span1" style="position: relative;">
+				<div id="1" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/1.jpg" rel="prettyPhoto[pp_gal]" title="I nostri modelli."><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/1.jpg"/></a></div>
+				<div id="2" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/2.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/2.jpg"/></a></div>
+				<div id="3" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/3.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/3.jpg"/></a></div>
+				<div id="4" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/4.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/4.jpg"/></a></div>
+				<div id="5" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/5.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/5.jpg"/></a></div>
+				<div id="6" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/6.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/6.jpg"/></a></div>
+				<div id="7" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/7.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/7.jpg"/></a></div>
+				<div id="8" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/8.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/8.jpg"/></a></div>
+				<div id="9" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/9.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/9.jpg"/></a></div>
+			</div>
+			<div class="span3">
+				<div class="content">
+					{% block inner_markup %}
+					{% endblock %}
+				</div>
+			</div>
+			<div class="span1">
+				<div class="row"><a href="/"><img src="{{ STATIC_URL }}img/boxes/fondstamp_giallo.jpg"/></a></div>
+				<div class="row"><div class="span1"><a href="/azienda"><img src="{{ STATIC_URL }}img/boxes/azienda.jpg"></a></div></div>
+				<div class="row"><div class="span1"><a href="/modelli"><img src="{{ STATIC_URL }}img/boxes/modelli.jpg"></a></div></div>
+				<div class="row"><div class="span1"><a href="/ghisa"><img src="{{ STATIC_URL }}img/boxes/ghisa.jpg"></a></div></div>
+				<div class="row"><div class="span1"><a href="/acciaio"><img src="{{ STATIC_URL }}img/boxes/acciaio.jpg"></a></div></div>
+				<div class="row"><div class="span1"><a href="/meccanica"><img src="{{ STATIC_URL }}img/boxes/meccanica.jpg"></a></div></div>
+				<div class="row"><div class="span1"><a href="/laboratorio"><img id='img_laboratorio' src="{{ STATIC_URL }}img/boxes/laboratorio.jpg"></a></div></div>
+			</div>
+			<div class="row span5 footer">
+				© 2009 Fondstamp S.pA. con unico socio - TEL. +39 0174 588004 - P.IVA 02816580985 - Via Peirone, 3 - 12047 Rocca de Baldi - Crava (CN) - C.C.I.A.A. di Cuneo 02816580985
+			</div>
+		</div> <!-- /container -->
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+		<script src="{{ STATIC_URL }}scripts/preview.js" type="text/javascript"></script>
+		<script src="http://cdn.jsdelivr.net/prettyphoto/3.1.5/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function resize() {
+				if ($(this).width() < 1200) {
+					$('.content').css('margin-top', '0px');
+					$('.two-columns').css('margin-top', '20px');
+					$('.two-columns').css('font-size', '11px');
+					/* if ($(this).width() > 768) {
+						$('#img_laboratorio').css('height', '73px');
+					} */
+				} else {
+					$('.content').css('margin-top', '3%');
+					$('.two-columns').css('margin-top', '13%');
+					$('.two-columns').css('font-size', '13px');
+					/* $('#img_laboratorio').css('height', '88px'); */
+				}
+			}
+			function readyFn( jQuery ) {
+				$("a[rel^='prettyPhoto']").prettyPhoto({
+					theme: 'pp_default', /* pp_default / light_rounded / dark_rounded / light_square / dark_square / facebook */
+					allow_resize: true,
+					social_tools: '',
+				});
+				var totFoto = 9; var totVisible = 4;
+				var hide = 0; var show = 4
+				var refreshId = setInterval(function() {
+					hide = hide % totFoto + 1; show = show % totFoto + 1;
+					var idToHide = '#' + hide; var idToShow = '#' + show;
+					$(idToShow).insertAfter(idToHide);
+					var selector = idToHide + "," + idToShow;
+					$(selector).toggleClass('hidden');
+				}, 5000);
+				resize();
+			}
+			$(document).ready(readyFn);
+			$(window).resize(resize);
+		</script>
 {% endblock %}

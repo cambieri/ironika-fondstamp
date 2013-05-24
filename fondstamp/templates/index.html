@@ -1,15 +1,61 @@
-{% extends "subsite.html" %}
+{% extends "site_base.html" %}
 {% load i18n %}
-
 
 {# This is the page title #}
 {% block title %}Fondstamp{% endblock %}
 
+{% block css %}
+{{ block.super }}
+		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+{% endblock %}
+
 
 {# Content of the page #}
 {% block markup %}
-
-	<h1>Benvenuti su Fondstamp</h1>
-
+		<div class="container">
+			<div class="row">
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/1.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/2.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/3.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/4.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/5.jpg"/></div>
+			</div>
+			<div class="row">
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/6.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/7.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/8.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/9.jpg"/></div>
+				<div class="span1">
+					<div class="row"><a href="azienda"><img src="{{ STATIC_URL }}img/boxes/azienda.jpg"></a></div>
+					<div class="row"><a href="modelli"><img src="{{ STATIC_URL }}img/boxes/modelli.jpg"></a></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span4"><img src="{{ STATIC_URL }}img/home/fondstamp.jpg"/></div>
+				<div class="span1">
+					<div class="row"><a href="ghisa"><img src="{{ STATIC_URL }}img/boxes/ghisa.jpg"></a></div>
+					<div class="row"><a href="acciaio"><img src="{{ STATIC_URL }}img/boxes/acciaio.jpg"></a></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/10.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/11.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/12.jpg"/></div>
+				<div class="span1"><img src="{{ STATIC_URL }}img/home/13.jpg"/></div>
+				<div class="span1">
+					<div class="row"><a href="meccanica"><img src="{{ STATIC_URL }}img/boxes/meccanica.jpg"></a></div>
+					<div class="row"><a href="laboratorio"><img src="{{ STATIC_URL }}img/boxes/laboratorio.jpg"></a></div>
+				</div>
+			</div>
+			<div class="row span5 footer">
+				© 2009 Fondstamp S.pA. con unico socio - TEL. +39 0174 588004 - P.IVA 02816580985 - Via Peirone, 3 - 12047 Rocca de Baldi - Crava (CN) - C.C.I.A.A. di Cuneo 02816580985
+			</div>
+		</div> <!-- /container -->
+{{ block.super }}
 {% endblock %}
 {# end of content #}
