@@ -2,9 +2,34 @@
 {% load i18n %}
 
 {% block inner_markup %}
-					<div class="row title">... acciaio ...</div>
+					<div class="row title {{pagina}}">
+						<img class="triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_acciaio.jpg">
+						FONDERIA GETTI IN ACCIAIO
+					</div>
 					<div class="row two-columns">
-						(descrizione acciaio)
+						Questa produzione operativa dal
+						2003, comprende una vasta gamma di
+						acciai destinati a differenti settori. Ad
+						inizio 2013 sono stati ultimati i lavori
+						che hanno permesso un importante
+						ampliamento dell’area produttiva,
+						che ha visto aumentare considerevolmente
+						le proprie potenzialità.
+						<br><br>La fonderia acciaio è dotata di 
+						attrezzature in grado di eseguire 
+						trattamenti termici, sbavatura, finitura e
+						verniciatura dei getti. La Fond-Stamp
+						opera sui getti in acciaio trattamenti
+						termici di ricottura, normalizzazione e
+						bonifica.
+						<br>
+						<div class="little_title {{pagina}}">
+							<img class="little_triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_acciaio.jpg">
+							FONDERIA ACCIAIO
+						</div>
+						Nr. 4 forni induzione, Getti in acciaio prodotti da modelli in legno ed in polistirolo
+						a perdere, fino ad un peso di 7,5 Tonnellate a getto (peso spedito).
+						<br><br><b>Capacità di Produzione: 1.100 Tonnellate / anno</b>
 					</div>
 					<div class="row" style="margin-top: 10%;"><a class="preview" href="{{ STATIC_URL }}img/schemi/schema_acciaio.jpg" rel="prettyPhoto" title="Schematizzazione."><img src="{{ STATIC_URL }}img/schemi/schema_acciaio.jpg"/></a></div>
 {% endblock %}

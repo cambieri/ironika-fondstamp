@@ -2,32 +2,43 @@
 {% load i18n %}
 
 {% block inner_markup %}
-					<div class="row title">COSTRUZIONE MODELLI IN POLISTIROLO</div>
+					<div class="row title {{pagina}}">
+						<img class="triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_modelli.jpg">
+						COSTRUZIONE MODELLI IN POLISTIROLO
+					</div>
 					<div class="row two-columns">
 						Questa tecnologia, originariamente
 						utilizzata per la produzione di getti
 						destinati al settore stampi, in seguito,
 						grazie soprattutto all’evoluzione che
 						ha interessato le tecniche di fonderia
-						e gli strumenti di supporto, quali prin-
-						cipalmente la simulazione di colata,
+						e gli strumenti di supporto, quali
+						principalmente la simulazione di colata,
 						è stata applicata con ottimi risultati
 						anche alle produzioni destinate ad
 						altri settori.
-						<br>Ad oggi questa applicazione permette,
+						<br><br>Ad oggi questa applicazione permette,
 						a costi ragionevoli, un’ importante
 						versatilità operativa e si presta alle più
 						svariate produzioni.
-						<br>L’attività è supportata da un centro
+						<br><br>L’attività è supportata da un centro
 						CAD-CAM per l’elaborazione dei dati
 						forniti dal cliente.
-						<br>A supporto di questa fase viene uti-
-						lizzato il software MAGMASOFT che,
-						simulando la fase di colata e solidi-
-						ficazione dei getti, evidenzia possi-
-						bili criticità e suggerisce importanti
+						<br>A supporto di questa fase viene
+						utilizzato il software MAGMASOFT che,
+						simulando la fase di colata e 
+						solidificazione dei getti, evidenzia 
+						possibili criticità e suggerisce importanti
 						accorgimenti da apportare in fase di
 						realizzazione modelli.
+						<br>
+						<div class="little_title {{pagina}}">
+							<img class="little_triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_modelli.jpg">
+							MODELLERIE
+						</div>
+						Ufficio CAD/CAM, Simulazione con Magmasoft,Nr.4 fresatrici CNC per polistirolo, 
+						Nr. 1 Modelleria interna e Nr. 1 Modelleria a Torino (FF Modelli).
+						<br><br><b>Ore di produzione disponibili: 40.000 ore / anno</b>
 					</div>
-					<div class="row" style="margin-top: 10%;"><a class="preview" href="{{ STATIC_URL }}img/schemi/schema_modelleria.jpg" rel="prettyPhoto" title="Schematizzazione."><img src="{{ STATIC_URL }}img/schemi/schema_modelleria.jpg"/></a></div>
+					<div class="row" style="margin-top: 8%;"><a class="preview" href="{{ STATIC_URL }}img/schemi/schema_modelleria.jpg" rel="prettyPhoto" title="Schematizzazione."><img src="{{ STATIC_URL }}img/schemi/schema_modelleria.jpg"/></a></div>
 {% endblock %}
