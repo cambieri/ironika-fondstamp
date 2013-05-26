@@ -2,8 +2,49 @@
 {% load i18n %}
 
 {% block inner_markup %}
-					<div class="row title">... laboratorio ...</div>
+					<div class="row title {{pagina}}">
+						<img class="triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_laboratorio.jpg">
+						CENTRO ANALISI METALLURGICHE
+					</div>
 					<div class="row two-columns">
-						(descrizione laboratorio)
+						Nato oltre 30 anni fa a supporto della
+						fonderia ghisa, nel 2012 il laboratorio
+						è stato rinnovato con le più moderne
+						attrezzature per prove, analisi e simulazioni.
+						<br><br>
+						Oggi il Centro Analisi Metallurgiche
+						(CAM) implementa le funzionalità
+						per il controllo delle caratteristiche
+						meccaniche e strutturali dei metalli.
+						<br><br>
+						Oltre ad un adeguamento degli stru-
+						menti per l’analisi microscopica, la
+						macchina di prova universale per
+						prove di trazione, allungamento, resilienza 
+						e durezza permette di definire
+						con maggior precisione le caratteri-
+						stiche meccaniche di ghise ed acciai prodotti.
+						<br>
+						La strumentazione d’indagine permette la realizzazione di controlli non
+						distruttivi quali Ultrasuoni e Magnetoscopia.
+						<br>
+						Ulteriormente potenziata l’attività di
+						simulazione di colata attraverso il
+						software MAGMA 5.2, con nuove postazioni 
+						di preparazione e convalida dati di input.
+						<br>
+						<div class="little_title {{pagina}}">
+							<img class="little_triangles" alt="Laboratorio" src="{{ STATIC_URL }}img/triangoli/triangoli_laboratorio.jpg">
+							EQUIPMENT LIST:
+						</div>
+						<br>• NIKON 100x-500x microscope with archive digital
+						<br>• DINO-LITE 50x – 100x – 200x Portable Magnifier for surface analysis
+						<br>• ERNST STE-B portable hardness
+						<br>• SPECTROLAB M7 for chemical analysis of cast iron
+						<br>• SPECTROMAX for chemical analysis of steel
+						<br>• USM Go ADVANCED for not destructive testing
+						<br>• Yoke TWST SN 24 for magnetoscope analysis
+						<br>• Hoytom 150 kN for tensile (elongation and hardness)
+						<br>• MAGMA 5.2 for casting simulation
 					</div>
 {% endblock %}

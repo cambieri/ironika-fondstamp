@@ -2,9 +2,24 @@
 {% load i18n %}
 
 {% block inner_markup %}
-					<div class="row title">... meccanica ...</div>
+					<div class="row title {{pagina}}">
+						<img class="triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_meccanica.jpg">
+						OFFICINA LAVORAZIONI MECCANICHE
+					</div>
 					<div class="row two-columns">
-						(descrizione meccanica)
+						L’officina meccanica è stata la prima delle attività complementari
+						nate intorno alla fonderia. Il reparto è supportato da un centro
+						CAD-CAM per l’elaborazione dei dati forniti dai clienti ed è dotato di
+						frese CNC, con le quali si eseguono lavorazioni 2D e 3D, 
+						principalmente su fusioni di medie e grandi dimensioni.
+						<br>
+						<div class="little_title {{pagina}}">
+							<img class="little_triangles" alt="Meccanica" src="{{ STATIC_URL }}img/triangoli/triangoli_meccanica.jpg">
+							OFFICINA LAVORAZIONI MECCANICHE
+						</div>
+						Nr. 5 fresatrici CNC + Nr. 1 fresatrice per spianatura lame, Lavorazioni 2D e 3D su
+						fusioni di medie e grandi dimensioni.
+						<br><br><b>Ore di produzione disponibili: 15.000 ore/anno.</b>
 					</div>
 					<div class="row" style="margin-top: 10%;"><a class="preview" href="{{ STATIC_URL }}img/schemi/schema_meccanica.jpg" rel="prettyPhoto" title="Schematizzazione."><img src="{{ STATIC_URL }}img/schemi/schema_meccanica.jpg"/></a></div>
 {% endblock %}
