@@ -34,7 +34,7 @@
 				</div>
 			</div>
 			<div class="span1">
-				<div class="row"><a href="/"><img src="{{ STATIC_URL }}img/boxes/fondstamp_giallo.jpg"/></a></div>
+				<div class="row"><a href="/"><img src="{{ STATIC_URL }}img/boxes/fondstamp_{{pagina}}.jpg"/></a></div>
 				<div class="row"><div class="span1"><a href="/azienda"><img src="{{ STATIC_URL }}img/boxes/azienda.jpg"></a></div></div>
 				<div class="row"><div class="span1"><a href="/modelli"><img src="{{ STATIC_URL }}img/boxes/modelli.jpg"></a></div></div>
 				<div class="row"><div class="span1"><a href="/ghisa"><img src="{{ STATIC_URL }}img/boxes/ghisa.jpg"></a></div></div>
@@ -58,6 +58,7 @@
 					$('.content').css('margin-top', '0px');
 					$('.two-columns').css('margin-top', '20px');
 					$('.two-columns').css('font-size', '11px');
+					$('.title').css('font-size', '13px');
 					/* if ($(this).width() > 768) {
 						$('#img_laboratorio').css('height', '73px');
 					} */
@@ -65,6 +66,7 @@
 					$('.content').css('margin-top', '3%');
 					$('.two-columns').css('margin-top', '13%');
 					$('.two-columns').css('font-size', '13px');
+					$('.title').css('font-size', '16px');
 					/* $('#img_laboratorio').css('height', '88px'); */
 				}
 			}

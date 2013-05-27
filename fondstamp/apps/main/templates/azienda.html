@@ -3,10 +3,12 @@
 
 {% block inner_markup %}
 					<div class="row secondary-menu title {{pagina}}">
-						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangoli_azienda.jpg">
-						<a class="{{pagina}}" href="{{ STATIC_URL }}img/other/cartina-clienti.png" rel="prettyPhoto" title="I nostri clienti">CLIENTI</a>
-						<a class="{{pagina}}" href="{{ STATIC_URL }}img/other/staff.jpg" rel="prettyPhoto" title="Lo staff dell'azienda">STAFF</a>
-						<a class="{{pagina}}" href="{{ STATIC_URL }}img/other/certificazioni.jpg" rel="prettyPhoto" title="Certificato ISO 9001:2008">CERTIFICAZIONI</a>
+						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
+						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#staff').hide(); $('#certificazioni').hide(); $('#clienti').show();">CLIENTI</a>
+						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
+						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#certificazioni').hide(); $('#staff').show();">STAFF</a>
+						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
+						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#staff').hide(); $('#certificazioni').show();">CERTIFICAZIONI</a>
 					</div>
 					<div class="row two-columns">
 						La Fond-Stamp è specializzata nella 
@@ -51,5 +53,136 @@
 						denominatore comune dalle grandi 
 						potenzialità, il core business comune 
 						costituito dall’attività fusoria.
+					</div>
+					<div id="clienti" class="azienda" style="display: none; position: relative;">
+						<div style="float: left; margin-top: 10px;">
+							<ul class="nazione">
+								<li>FRANCIA
+									<ul class="citta">
+										<li>A <b>PSA RENNES</b> - CHARTRES DE BRETAGNE</li>
+										<li>B <b>PSA SOCHAUX</b> - MONTBELIARD</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nazione">
+								<li>GERMANIA
+									<ul class="citta">
+										<li>C <b>AUDI</b> - INGOLSTADT</li>
+										<li>D <b>BMW</b> - DINGOLFING</li>
+										<li>E <b>BMW</b> - MUNCHEN</li>
+										<li>F <b>BMW</b> - KRAUTHAUSEN</li>
+										<li>G <b>DAIMLER</b> - SINDELFINGEN</li>
+										<li>H <b>DAIMLER</b> - BREMEN</li>
+										<li>I <b>THYSSENKRUPP</b> - WADERN LOCKWEILER</li>
+										<li>J <b>THYSSENKRUPP</b> - HEILBRONN</li>
+										<li>K <b>VOESTALPINE POLYNORM</b> - SCHWABISH GMUND</li>
+										<li>L <b>VOLKSWAGEN</b> - WOLFSBURG</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nazione">
+								<li>INGHILTERRA
+									<ul class="citta">
+										<li>M <b>BMW UK</b> - SWINDON</li>
+										<li>N <b>WHISTON INDUSTRIES</b> - WEST MIDLANDS</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nazione">
+								<li>ITALIA
+									<ul class="citta">
+										<li>O <b>FAIB</b> - BASSANO DEL GRAPPA (VICENZA)</li>
+										<li>P <b>IPB</b> - BRANDIZZO (TORINO)</li>
+										<li>Q <b>NUOVA STAME</b> - SIRTORI (LECCO)</li>
+										<li>R <b>SUSTA</b> - CASTELLALTO (TERAMO)</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nazione">
+								<li>OLANDA
+									<ul class="citta">
+										<li>S <b>VOESTALPINE BV</b> - LJ BUNSCHNOTEN</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nazione">
+								<li>POLONIA
+									<ul class="citta">
+										<li>T <b>FIAT POLAND</b> - BIELSKO BIALA</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nazione">
+								<li>REPUBBLICA CECA
+									<ul class="citta">
+										<li>U <b>SKODA</b> - MLADA BOLESLAV</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nazione">
+								<li>ROMANIA
+									<ul class="citta">
+										<li>V <b>DACIA</b> - MIOVENI ARGES</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nazione">
+								<li>SLOVENIA
+									<ul class="citta">
+										<li>W <b>KOVINOPLASTIKA</b> - STARI TRG PRI LOZU</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nazione">
+								<li>UNGHERIA
+									<ul class="citta">
+										<li>X <b>AUDI</b> - GYOR</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div style="margin-top: -20px; height: 678px; position: absolute; right: -20px; z-index: -1;">
+						<!-- <div style="float: right; width: 60%; height: 678px; margin-top: -20px; margin-right: -20px; position: relative; z-index: -1"> -->
+							<img alt="Cartina clienti" src="{{ STATIC_URL }}img/other/cartina_clienti.jpg" style="height: 100%">
+						</div>
+					</div>
+					<div id="staff" class="azienda" style="display: none;">
+						<div style="margin-top: 40px; margin-bottom: 40px; float: left; width: 30%;">
+							<ul class="staff"><li><b>Presidente:</b><br>Armando Tosello<br><img src="{{ STATIC_URL }}img/staff/presidente.jpg"></li></ul>
+							<ul class="staff"><li><b>Amministratore delegato:</b><br>Enrico Frigerio<br><img src="{{ STATIC_URL }}img/staff/ammin_delegato.jpg"></li></ul>
+							<ul class="staff"><li><b>Direttore generale:</b><br>Giancarlo Duvina<br><img src="{{ STATIC_URL }}img/staff/direttore.jpg"></li></ul>
+							<ul class="staff"><li><b>Amministrazione:</b><br>Ornella Tomatis<br><img src="{{ STATIC_URL }}img/staff/ammin.jpg"></li></ul>
+							<ul class="staff"><li><b>Acquisti:</b><br>Daniela Tosello<br><img src="{{ STATIC_URL }}img/staff/acquisti.jpg"></li></ul>
+						</div>
+						<div style="margin-top: 40px; margin-bottom: 40px; float: left; width: 45%;">
+							<ul class="staff"><li><b>Qualità:</b><br>
+								<div>Claudio Sasso<br><img src="{{ STATIC_URL }}img/staff/qualita_1.jpg"></div>
+								<div>Paolo Godano<br><img src="{{ STATIC_URL }}img/staff/qualita_2.jpg"></div></li>
+							</ul>
+							<ul class="staff"><li><b>Commerciale:</b><br>
+								<div>Luciana Massano<br>(ITA/FRA)<br><img src="{{ STATIC_URL }}img/staff/stc_1.jpg"></div>
+								<div>Federica Cravero<br>(ITA/TED/INGL)<br><img src="{{ STATIC_URL }}img/staff/stc_2.jpg"></div>
+								<p></p>
+								<div>Alessia Raviola<br>(ITA/FRA/SPA)<br><img src="{{ STATIC_URL }}img/staff/stc_3.jpg"></div>
+								<div>Claudia Ferrero<br>(ITA/TED//FRA/INGL)<br><img src="{{ STATIC_URL }}img/staff/stc_4.jpg"></div></li>
+							</ul>
+							<ul class="staff" style="margin-top: -3px"><li><b>Modelleria:</b><br>Luca Cusanno<br><img src="{{ STATIC_URL }}img/staff/modelleria.jpg"></li></ul>
+							<ul class="staff"><li><b>Fonderia ghisa:</b><br>Marco Salvatico<br><img src="{{ STATIC_URL }}img/staff/ghisa.jpg"></li></ul>
+						</div>
+						<div style="margin-top: 40px; margin-bottom: 40px; float: right; width: 25%;">
+							<ul class="staff"><li><b>Fonderia acciaio:</b><br>Angelo Bernardi<br><img src="{{ STATIC_URL }}img/staff/acciaio.jpg"></li></ul>
+							<ul class="staff"><li><b>Officina:</b><br>Sergio Beatovic<br><img src="{{ STATIC_URL }}img/staff/officina.jpg"></li></ul>
+							<ul class="staff"><li><b>Manutenzione:</b><br>Massimo Capellano<br><img src="{{ STATIC_URL }}img/staff/manutenzione.jpg"></li></ul>
+							<ul class="staff"><li><b>Ricerca & sviluppo:</b><br>Ufficio tecnico<br><img src="{{ STATIC_URL }}img/staff/unknown.jpg"></li></ul>
+						</div>
+					</div>
+					<div id="certificazioni" class="azienda" style="display: none;">
+						<div style="margin-top: 80px; margin-bottom: 40px;">
+							In questa sezione è raccolta tutta la documentazione
+							<br>Fond-Stamp riguardante Certificazioni e Qualità.
+						</div>
+						<a href="{{ STATIC_URL }}img/other/certificazioni.pdf" target="_blank">
+							<img alt="Download PDF" src="{{ STATIC_URL }}img/other/pdf_download_icon.png" width="60">&nbsp;Certificato Sistema Qualità
+						</a>
 					</div>
 {% endblock %}
