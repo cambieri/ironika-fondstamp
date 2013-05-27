@@ -6,7 +6,7 @@
 		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
 		
 		<!-- prettyPhoto -->
-		<link href="http://cdn.jsdelivr.net/prettyphoto/3.1.5/css/prettyPhoto.css" type="text/css" rel="stylesheet" media="screen">
+		<link href="{{ STATIC_URL }}css/prettyPhoto.css" type="text/css" rel="stylesheet" media="screen">
 		
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -17,7 +17,7 @@
 {% block markup %}
 		<div class="container">
 			<div class="span1" style="position: relative;">
-				<div id="1" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/1.jpg" rel="prettyPhoto[pp_gal]" title="I nostri modelli."><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/1.jpg"/></a></div>
+				<div id="1" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/1.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/1.jpg"/></a></div>
 				<div id="2" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/2.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/2.jpg"/></a></div>
 				<div id="3" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/3.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/3.jpg"/></a></div>
 				<div id="4" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/4.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/4.jpg"/></a></div>
@@ -51,7 +51,7 @@
 {% block js %}
 {{ block.super }}
 		<script src="{{ STATIC_URL }}scripts/preview.js" type="text/javascript"></script>
-		<script src="http://cdn.jsdelivr.net/prettyphoto/3.1.5/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+		<script src="{{ STATIC_URL }}scripts/jquery.prettyPhoto.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			function resize() {
 				if ($(this).width() < 1200) {
