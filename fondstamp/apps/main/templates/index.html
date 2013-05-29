@@ -17,7 +17,6 @@
 
 {# Content of the page #}
 {% block markup %}
-		<div class="container">
 			<div class="row">
 				<div class="span1"><img src="{{ STATIC_URL }}img/home/1.jpg"/></div>
 				<div class="span1"><img src="{{ STATIC_URL }}img/home/2.jpg"/></div>
@@ -52,10 +51,6 @@
 					<div class="row"><a href="laboratorio"><img src="{{ STATIC_URL }}img/boxes/laboratorio.jpg"></a></div>
 				</div>
 			</div>
-			<div class="row span5 footer">
-				© 2009 Fondstamp S.pA. con unico socio - TEL. +39 0174 588004 - P.IVA 02816580985 - Via Peirone, 3 - 12047 Rocca de Baldi - Crava (CN) - C.C.I.A.A. di Cuneo 02816580985
-			</div>
-		</div> <!-- /container -->
 {{ block.super }}
 {% endblock %}
 {# end of content #}
