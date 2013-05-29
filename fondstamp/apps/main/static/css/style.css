@@ -148,7 +148,7 @@ div.pp_default .pp_content {
  
 /* Default */
 @media (min-width: 980px) and (max-width: 1199px) {
-	#img_laboratorio { height: 74px; }
+	/* #img_laboratorio { height: 74px; } */
 }
  
 /* Portrait tablet to landscape and desktop */
