@@ -54,23 +54,6 @@
 		<script src="{{ STATIC_URL }}scripts/preview.js" type="text/javascript"></script>
 		<script src="{{ STATIC_URL }}scripts/jquery.prettyPhoto.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			function resize() {
-				if ($(this).width() < 1200) {
-					$('.content').css('margin-top', '0px');
-					$('.two-columns').css('margin-top', '20px');
-					$('.two-columns').css('font-size', '11px');
-					$('.title').css('font-size', '13px');
-					/* if ($(this).width() > 768) {
-						$('#img_laboratorio').css('height', '73px');
-					} */
-				} else {
-					$('.content').css('margin-top', '3%');
-					$('.two-columns').css('margin-top', '13%');
-					$('.two-columns').css('font-size', '13px');
-					$('.title').css('font-size', '16px');
-					/* $('#img_laboratorio').css('height', '88px'); */
-				}
-			}
 			function readyFn( jQuery ) {
 				$("a[rel^='prettyPhoto']").prettyPhoto({
 					theme: 'pp_default', /* pp_default / light_rounded / dark_rounded / light_square / dark_square / facebook */
@@ -89,6 +72,5 @@
 				resize();
 			}
 			$(document).ready(readyFn);
-			$(window).resize(resize);
 		</script>
 {% endblock %}

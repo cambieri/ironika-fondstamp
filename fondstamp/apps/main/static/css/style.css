@@ -21,31 +21,28 @@ a:ACTIVE, a:FOCUS, a:VISITED {
 
 ul.staff {
 	list-style-image: url("../img/triangoli/triangolo_singolo_azienda.jpg");
-	font-size: 12px;
-	margin: 20px;
+	font-size: 11px;
+	margin-top: 14px;
 }
 .staff div {
 	display: inline-block;
 }
 ul.nazione {
 	list-style-image: url("../img/triangoli/triangolo_singolo_azienda.jpg");
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
-	margin: 13px;
+	margin: 2px 13px;
 }
 ul.citta {
 	list-style-image: none;
 	list-style-type: none;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: normal;
 	text-indent: -24px;
 }
-li {
-	line-height: 15px;
-}
 
 .content {
-	margin: 3% 20px 0px 20px;
+	margin: 0px 20px 0px 20px;
 }
 
 .secondary-menu a {
@@ -57,7 +54,7 @@ li {
 	margin-right: 12px;
 }
 .title {
-	font-size: 16px;
+	font-size: 13px;
 	font-weight: bold;
 }
 .little_triangles {
@@ -68,7 +65,7 @@ li {
 .little_title {
 	margin-top: 10%;
 	margin-bottom: 4%;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
 }
 
@@ -81,8 +78,8 @@ a.azienda:HOVER { color: #9D9D9D !important; }
 .laboratorio { color: #DADADA; }
 
 .two-columns {
-	margin-top: 6%;
-	font-size: 13px;
+	margin-top: 12px;
+	font-size: 11px;
 	text-align: left;
 
 	-moz-column-count:2; /* Firefox */
@@ -141,22 +138,50 @@ div.pp_default .pp_content {
 	max-height: 800px;
 }*/
 
+#clienti {
+	 margin-top: 6px;
+}
+#clienti li {
+	 line-height: 14px;
+}
+#cartina-clienti {
+	height: 550px;
+}
+
+#staff {
+	overflow: hidden;
+	margin-top: -4px;
+	margin-left: -12px;
+}
+#staff-col-1 {
+	width: 28%;
+}
+#staff-col-2 {
+	width: 47%;
+}
+#staff-col-3 {
+	width: 25%;
+}
+#staff li {
+	line-height: 12px;
+}
+
 
 /* RESPONSIVE */
 
 /* Large desktop */
-@media (min-width: 1200px) { }
- 
-/* Default */
-@media (min-width: 980px) and (max-width: 1199px) {
-	/* #img_laboratorio { height: 74px; } */
+@media (min-width: 1200px) {
+	.content { margin-top: 3%; }
+	.two-columns { margin-top: 13%; font-size: 13px; }
+	.title { font-size: 16px; }
+	.little_title { font-size: 14px; }
+	#clienti li { line-height: 15px; }
+	ul.nazione { font-size: 14px; margin: 13px; }
+	ul.citta { font-size: 12px; }
+	#cartina-clienti { height: auto; }
+	#staff { margin-top: 40px; }
+	#staff li { line-height: 14px; }
+	#staff-col-1 { width: 32%; }
+	#staff-col-2 { width: 48%; }
+	#staff-col-3 { width: 20%; }
 }
- 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { }
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) { }
- 
-/* Landscape phones and down */
-@media (max-width: 480px) { }
