@@ -54,9 +54,9 @@
 						potenzialità, il core business comune 
 						costituito dall’attività fusoria.
 						<br><br><img class="little_triangles" alt="" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
-						<strong><a class="{{pagina}}" href="#google-map-modal" data-toggle="modal">COME RAGGIUNGERCI</a></strong>
+						<strong><a class="{{pagina}}" href="javascript:open_map();">COME RAGGIUNGERCI</a></strong>
 					</div>
-					<div id="google-map-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div id="google-map-modal" class="modal invisible fade" style="width:562px; height:562px; top: 20px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-header">
 							<a class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
 							<h3>Fond-Stamp S.p.A.</h3>
@@ -70,12 +70,7 @@
 							<!-- <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">Chiudi</a> -->
 						</div>
 					</div>
-					<!-- <script type="text/javascript">
-						$('#google-map-modal').on('shown', function () {
-						    initialize();
-						});
-					</script> -->
-					<div id="clienti" class="azienda" style="display: none; position: relative;">
+					<div id="clienti" class="row azienda" style="display: none; position: relative;">
 						<div style="float: left; margin-top: 2px;">
 							<ul class="nazione">
 								<li>FRANCIA
@@ -206,4 +201,13 @@
 							<img alt="Download PDF" src="{{ STATIC_URL }}img/other/pdf_download_icon.png" width="60"><strong>&nbsp;Certificato Sistema Qualità</strong>
 						</a>
 					</div>
+{% endblock %}
+{% block js %}
+{{ block.super }}
+		<script type="text/javascript">
+			function open_map() {   
+				$('#google-map-modal').removeClass("invisible");
+				$('#google-map-modal').modal('toggle');   
+			}		
+		</script>
 {% endblock %}
