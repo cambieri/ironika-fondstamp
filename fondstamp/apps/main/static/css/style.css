@@ -9,7 +9,7 @@ body {
 }
 
 a {
-	color: #333;
+	color: inherit;
 }
 a:HOVER {
 	color: inherit;
@@ -73,6 +73,7 @@ li {
 }
 
 .azienda { color: #9D9D9D; }
+a.azienda:HOVER { color: #9D9D9D !important; }
 .modelli { color: #FFCC01; }
 .ghisa { color: #BF1522; }
 .acciaio { color: #5487C6; }
@@ -132,14 +133,13 @@ div.pp_default .pp_content {
 	background: #333 !important;
 }
 
-#google-map-modal {
+/* #google-map-modal {
 	width: 670px;
 	margin: -60px 0 0 -335px;
-	display: none;
 }
 #google-map-modal .modal-body {
 	max-height: 800px;
-}
+}*/
 
 
 /* RESPONSIVE */
