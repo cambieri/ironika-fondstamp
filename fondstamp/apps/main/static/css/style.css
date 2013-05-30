@@ -2,8 +2,8 @@
 
 body {
 	/* background-color: black; */
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	position: relative;
 	font-size: 13px;
 }
@@ -134,7 +134,8 @@ div.pp_default .pp_content {
 
 #google-map-modal {
 	width: 670px;
-	margin: 0 0 0 -335px;
+	margin: -60px 0 0 -335px;
+	display: none;
 }
 #google-map-modal .modal-body {
 	max-height: 800px;
