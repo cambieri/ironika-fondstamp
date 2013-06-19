@@ -16,15 +16,15 @@
 
 {% block markup %}
 			<div class="span1" style="position: relative;">
-				<div id="1" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/1.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/1.jpg"/></a></div>
-				<div id="2" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/2.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/2.jpg"/></a></div>
-				<div id="3" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/3.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/3.jpg"/></a></div>
-				<div id="4" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/4.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/4.jpg"/></a></div>
-				<div id="5" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/5.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/5.jpg"/></a></div>
-				<div id="6" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/6.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/6.jpg"/></a></div>
-				<div id="7" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/7.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/7.jpg"/></a></div>
-				<div id="8" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/8.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/8.jpg"/></a></div>
-				<div id="9" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/9.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/9.jpg"/></a></div>
+				<div id="1" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/1.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/1.jpg"></a></div>
+				<div id="2" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/2.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/2.jpg"></a></div>
+				<div id="3" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/3.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/3.jpg"></a></div>
+				<div id="4" class="row"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/4.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/4.jpg"></a></div>
+				<div id="5" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/5.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/5.jpg"></a></div>
+				<div id="6" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/6.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/6.jpg"></a></div>
+				<div id="7" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/7.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/7.jpg"></a></div>
+				<div id="8" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/8.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/8.jpg"></a></div>
+				<div id="9" class="row hidden"><a class="preview" href="{{ STATIC_URL }}img/gallery/{{pagina}}/grandi/9.jpg" rel="prettyPhoto[pp_gal]"><img src="{{ STATIC_URL }}img/gallery/{{pagina}}/piccole/9.jpg"></a></div>
 			</div>
 			<div class="span3">
 				<div class="content">
@@ -58,10 +58,11 @@
 				$("a[rel^='prettyPhoto']").prettyPhoto({
 					theme: 'pp_default', /* pp_default / light_rounded / dark_rounded / light_square / dark_square / facebook */
 					allow_resize: true,
-					social_tools: '',
+					// overlay_gallery: false,
+					social_tools: ''
 				});
 				var totFoto = 9; var totVisible = 4;
-				var hide = 0; var show = 4
+				var hide = 0; var show = 4;
 				var refreshId = setInterval(function() {
 					hide = hide % totFoto + 1; show = show % totFoto + 1;
 					var idToHide = '#' + hide; var idToShow = '#' + show;
@@ -69,8 +70,25 @@
 					var selector = idToHide + "," + idToShow;
 					$(selector).toggleClass('hidden');
 				}, 5000);
-				resize();
+				// resize();
 			}
 			$(document).ready(readyFn);
 		</script>
+		<!--[if lte IE 9]>
+		<style>
+			.column p, .column h1 { padding-right: 15px; }
+		</style>
+		<script src="{{ STATIC_URL }}scripts/jquery.columnizer.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready( function() {
+				$("a[rel^='prettyPhoto']").prettyPhoto({
+					theme: 'pp_default',
+					allow_resize: true,
+					overlay_gallery: false,
+					social_tools: ''
+				});
+				$('.two-columns').columnize({ columns: 2 });
+			});
+		</script>
+		<![endif]-->
 {% endblock %}

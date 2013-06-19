@@ -11,12 +11,13 @@
 						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#staff').hide(); $('#certificazioni').show();">CERTIFICAZIONI</a>
 					</div>
 					<div class="row two-columns">
-						La Fond-Stamp è specializzata nella 
+						<p>La Fond-Stamp è specializzata nella 
 						produzione di getti in ghisa ed acciaio ottenuti da modelli in polistirolo a 
 						perdere ed è oggi considerata una fra 
 						le aziende leader in questo settore.
 						<br>L’azienda nasce nel 1967 come fonderia di getti in ghisa destinati al settore macchine utensili e stampi carrozzeria per l’industria Automotive.
-						<br><br>Nel corso degli anni, pur conservando nell’attività fusoria il proprio core 
+						</p>
+						<p>Nel corso degli anni, pur conservando nell’attività fusoria il proprio core 
 						business, la Fond-Stamp ha deciso 
 						di ampliare le proprie competenze 
 						inserendo prima l’officina per le lavorazioni meccaniche sui getti ed in 
@@ -28,7 +29,8 @@
 						e portati a termine nel 2013, che ne 
 						hanno permesso un considerevole 
 						ampliamento, sia in termini di superficie operativa che di capacità.
-						<br><br>Pertanto oggi, con una presenza sul 
+						</p>
+						<p>Pertanto oggi, con una presenza sul 
 						mercato di oltre 45 anni, la FondStamp si propone quale interlocutore 
 						esperto e versatile, in grado di offrire 
 						quattro diversi tipi di produzioni quali:
@@ -44,7 +46,8 @@
 						specifico know-how, che le consente 
 						di mettere in atto le più diversificate 
 						soluzioni produttive. 
-						<br><br>La recente partnership con la Fonderia di Torbole e tutti gli importanti 
+						</p>
+						<p>La recente partnership con la Fonderia di Torbole e tutti gli importanti 
 						investimenti che l’hanno caratterizzata, rappresentano per l’azienda uno 
 						degli sviluppi più significativi avvenuti 
 						negli ultimi anni. Fonderia di Torbole e Fond-Stamp infatti, pur essendo 
@@ -53,8 +56,10 @@
 						denominatore comune dalle grandi 
 						potenzialità, il core business comune 
 						costituito dall’attività fusoria.
-						<br><br><img class="little_triangles" alt="" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
+						</p>
+						<p><img class="little_triangles" alt="" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
 						<strong><a class="{{pagina}}" href="javascript:open_map();">COME RAGGIUNGERCI</a></strong>
+						</p>
 					</div>
 					<div id="google-map-modal" class="modal invisible fade" style="width:562px; height:562px; top: 20px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-header">
@@ -198,7 +203,7 @@
 							<br>Fond-Stamp riguardante Certificazioni e Qualità.
 						</div>
 						<a class="{{pagina}}" href="{{ STATIC_URL }}img/other/certificazioni.pdf" target="_blank">
-							<img alt="Download PDF" src="{{ STATIC_URL }}img/other/pdf_download_icon.png" width="60"><strong>&nbsp;Certificato Sistema Qualità</strong>
+							<img alt="Download PDF" src="{{ STATIC_URL }}img/other/pdf_download_icon.png" width="60" style="max-width: 60px;"><strong>&nbsp;Certificato Sistema Qualità</strong>
 						</a>
 					</div>
 {% endblock %}
@@ -208,6 +213,6 @@
 			function open_map() {   
 				$('#google-map-modal').removeClass("invisible");
 				$('#google-map-modal').modal('toggle');   
-			}		
+			}
 		</script>
 {% endblock %}

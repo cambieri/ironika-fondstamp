@@ -9,8 +9,8 @@ this.imagePreview = function() {
 		img.onload = function() {
 			var pos_x = ($(window).width() - $("#preview").outerWidth(true)) / 2;
 			if (pos_x < 0) pos_x = 0;
-//			var pos_y = this.src.indexOf("schema") == -1 ? ($(window).height() - $("#preview").outerHeight()) / 2 : parseInt($("body").css("padding-top").replace("px", ""));
-			var pos_y = ($(window).height() - $("#preview").outerHeight(true)) / 2;
+			var pos_y = this.src.indexOf("schema") == -1 ? ($(window).height() - $("#preview").outerHeight()) / 2 : parseInt($("body").css("padding-top").replace("px", ""));
+//			var pos_y = ($(window).height() - $("#preview").outerHeight(true)) / 2;
 			if (pos_y < 0) pos_y = 0;
 			$("#preview")
 				.css("top", pos_y + "px")
