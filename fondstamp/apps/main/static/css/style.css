@@ -185,3 +185,12 @@ div.pp_default .pp_content {
 	#staff-col-2 { width: 48%; }
 	#staff-col-3 { width: 20%; }
 }
+
+
+/* PRETTY PHOTO */
+
+/* Bug-fix per minigallery su explorer con bootstrap abilitato */
+.pp_gallery ul a img {
+	min-width: 50px;
+	width: 50px;
+}
