@@ -35,16 +35,16 @@
 			<div class="span1">
 				<div class="row"><a href="/"><img src="{{ STATIC_URL }}img/boxes/fondstamp_{{pagina}}.jpg"/></a></div>
 				<div class="row" style="min-height: 141px;">
-					<a href="/azienda"><img src="{{ STATIC_URL }}img/boxes/azienda.jpg"></a>
-					<a href="/modelli"><img src="{{ STATIC_URL }}img/boxes/modelli.jpg"></a>
+					<a href="/azienda"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/azienda.jpg"></a>
+					<a href="/modelli"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/modelli.jpg"></a>
 				</div>
 				<div class="row" style="min-height: 141px;">
-					<a href="/ghisa"><img src="{{ STATIC_URL }}img/boxes/ghisa.jpg"></a>
-					<a href="/acciaio"><img src="{{ STATIC_URL }}img/boxes/acciaio.jpg"></a>
+					<a href="/ghisa"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/ghisa.jpg"></a>
+					<a href="/acciaio"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/acciaio.jpg"></a>
 				</div>
 				<div class="row" style="min-height: 141px;">
-					<a href="/meccanica"><img src="{{ STATIC_URL }}img/boxes/meccanica.jpg"></a>
-					<a href="/laboratorio"><img id='img_laboratorio' src="{{ STATIC_URL }}img/boxes/laboratorio.jpg"></a>
+					<a href="/meccanica"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/meccanica.jpg"></a>
+					<a href="/laboratorio"><img id='img_laboratorio' src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/laboratorio.jpg"></a>
 				</div>
 			</div>
 {% endblock %}

@@ -7,6 +7,33 @@
 						COSTRUZIONE MODELLI IN POLISTIROLO
 					</div>
 					<div class="row two-columns">
+					{% if LANGUAGE_CODE == "en" %}
+						<p>ENGLISH</p>
+					{% else %}{% if LANGUAGE_CODE == "fr" %}
+						<p>Grâce à l’évolution technologique
+						qui a intéressé la réalisation des
+						modèles et les techniques de fusion, 
+						aujourd’hui cette méthodologie est 
+						appliqué à plusieurs productions et 
+						secteurs en garantissant, à
+						coûts raisonnablement contenus,
+						un important éclectisme opérationnel. 
+						</p>
+						<p>L’activité est appuyée sur un
+						centre CAD-CAM pour l’élaboration
+						des données.
+						<br>
+						<div class="little_title {{pagina}}">
+							<img class="little_triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_modelli.jpg">
+							ATELIERS MODELAGE
+						</div>
+						<p>Nr. 4 Machines à fraiser pour le polystyrène , Bureau CAD/CAM, Simulation avec Magmasoft, 
+						Nr.1 Atelier Modelage interne et Nr.1 Atelier Modelage à Turin ( FF Modelli ).
+						</p>
+						<p><b>Heures de production disponibles: 40.000 heures / année</b></p>
+					{% else %}{% if LANGUAGE_CODE == "de" %}
+						<p>GERMAN</p>
+					{% else %}
 						<p>Questa tecnologia, originariamente
 						utilizzata per la produzione di getti
 						destinati al settore stampi, in seguito,
@@ -42,6 +69,7 @@
 						Nr. 1 Modelleria interna e Nr. 1 Modelleria a Torino (FF Modelli).
 						</p>
 						<p><b>Ore di produzione disponibili: 40.000 ore / anno</b></p>
+					{% endif %}{% endif %}{% endif %}
 					</div>
 					<div class="row" style="margin-top: 8%;"><a class="preview" href="{{ STATIC_URL }}img/schemi/schema_modelleria.jpg" title="Schematizzazione."><img src="{{ STATIC_URL }}img/schemi/schema_modelleria.jpg"/></a></div>
 {% endblock %}

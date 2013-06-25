@@ -45,6 +45,15 @@ ul.citta {
 	margin: 0px 20px 0px 20px;
 }
 
+.language_choices {	position: relative; }
+.language_choices form { margin: 0; }
+.language { position: absolute; }
+.language button { background:transparent; border: none; margin: 0; padding: 0; }
+.language.it { top: 20px; }
+.language.en { top: 44px; }
+.language.fr { top: 68px; }
+.language.de { top: 92px; }
+
 .secondary-menu a {
 	margin-right: 40px;
 }
@@ -172,6 +181,10 @@ div.pp_default .pp_content {
 /* Large desktop */
 @media (min-width: 1200px) {
 	.content { margin-top: 3%; }
+	.language.it { top: 40px; }
+	.language.en { top: 64px; }
+	.language.fr { top: 88px; }
+	.language.de { top: 112px; }
 	.two-columns { margin-top: 13%; font-size: 13px; }
 	.title { font-size: 16px; }
 	.little_title { font-size: 14px; }

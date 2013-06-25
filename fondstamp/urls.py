@@ -6,6 +6,7 @@ from django.views.generic.base import TemplateView
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^azienda$', TemplateView.as_view(template_name="azienda.html", get_context_data=lambda: {'pagina': 'azienda'})),

@@ -30,15 +30,24 @@
 				<div class="span1"><img src="{{ STATIC_URL }}img/home/8.jpg"/></div>
 				<div class="span1"><img src="{{ STATIC_URL }}img/home/9.jpg"/></div>
 				<div class="span1">
-					<div class="row"><a href="azienda"><img src="{{ STATIC_URL }}img/boxes/azienda.jpg"></a></div>
-					<div class="row"><a href="modelli"><img src="{{ STATIC_URL }}img/boxes/modelli.jpg"></a></div>
+					<div class="row"><a href="azienda"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/azienda.jpg"></a></div>
+					<div class="row"><a href="modelli"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/modelli.jpg"></a></div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="span4"><img src="{{ STATIC_URL }}img/home/fondstamp.jpg"/></div>
+				<div class="span4 language_choices">
+					<img src="{{ STATIC_URL }}img/home/fondstamp.jpg"/>
+					<form action="{% url 'set_language' %}" method="post">
+					{% csrf_token %}
+					<div class="language it"><button type="submit" name="language" value="it"><img src="{{ STATIC_URL }}img/home/it.jpg"/></button></div>
+					<div class="language en"><button type="submit" name="language" value="en"><img src="{{ STATIC_URL }}img/home/en.jpg"/></button></div>
+					<div class="language fr"><button type="submit" name="language" value="fr"><img src="{{ STATIC_URL }}img/home/fr.jpg"/></button></div>
+					<div class="language de"><button type="submit" name="language" value="de"><img src="{{ STATIC_URL }}img/home/de.jpg"/></button></div>
+					</form>
+				</div>
 				<div class="span1">
-					<div class="row"><a href="ghisa"><img src="{{ STATIC_URL }}img/boxes/ghisa.jpg"></a></div>
-					<div class="row"><a href="acciaio"><img src="{{ STATIC_URL }}img/boxes/acciaio.jpg"></a></div>
+					<div class="row"><a href="ghisa"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/ghisa.jpg"></a></div>
+					<div class="row"><a href="acciaio"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/acciaio.jpg"></a></div>
 				</div>
 			</div>
 			<div class="row">
@@ -47,8 +56,8 @@
 				<div class="span1"><img src="{{ STATIC_URL }}img/home/12.jpg"/></div>
 				<div class="span1"><img src="{{ STATIC_URL }}img/home/13.jpg"/></div>
 				<div class="span1">
-					<div class="row"><a href="meccanica"><img src="{{ STATIC_URL }}img/boxes/meccanica.jpg"></a></div>
-					<div class="row"><a href="laboratorio"><img src="{{ STATIC_URL }}img/boxes/laboratorio.jpg"></a></div>
+					<div class="row"><a href="meccanica"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/meccanica.jpg"></a></div>
+					<div class="row"><a href="laboratorio"><img src="{{ STATIC_URL }}img/boxes/{{ LANGUAGE_CODE }}/laboratorio.jpg"></a></div>
 				</div>
 			</div>
 {{ block.super }}
