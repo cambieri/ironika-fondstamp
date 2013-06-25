@@ -11,55 +11,43 @@
 						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#staff').hide(); $('#certificazioni').show();">CERTIFICAZIONI</a>
 					</div>
 					<div class="row two-columns">
-						<p>La Fond-Stamp è specializzata nella 
-						produzione di getti in ghisa ed acciaio ottenuti da modelli in polistirolo a 
-						perdere ed è oggi considerata una fra 
-						le aziende leader in questo settore.
-						<br>L’azienda nasce nel 1967 come fonderia di getti in ghisa destinati al settore macchine utensili e stampi carrozzeria per l’industria Automotive.
-						</p>
-						<p>Nel corso degli anni, pur conservando nell’attività fusoria il proprio core 
-						business, la Fond-Stamp ha deciso 
-						di ampliare le proprie competenze 
-						inserendo prima l’officina per le lavorazioni meccaniche sui getti ed in 
-						seguito la modelleria per la produzione di modelli in polistirolo a perdere.
-						A completamento di questa evoluzione, nel 2003 è stata avviata la nuova 
-						fonderia per la produzione di fusioni 
-						in acciaio. Questo reparto produttivo 
-						è stato recentemente oggetto di importanti investimenti iniziati nel 2012 
-						e portati a termine nel 2013, che ne 
-						hanno permesso un considerevole 
-						ampliamento, sia in termini di superficie operativa che di capacità.
-						</p>
-						<p>Pertanto oggi, con una presenza sul 
-						mercato di oltre 45 anni, la FondStamp si propone quale interlocutore 
-						esperto e versatile, in grado di offrire 
-						quattro diversi tipi di produzioni quali:
+					{% if LANGUAGE_CODE == "en" %}
+						<p>Fond-Stamp is specialised in the production of cast iron and steel castings obtained by lost foam polystyrene patterns and ranks among the leading firms in this sector.
+						<br>The Company was established in 1967 as a cast iron foundry especially aimed at producing castings for the machine tool sector and for the Automotive industry.</p>
+						<p>Over the years, although maintaining the melting as its core business, the company has extended its technical skills adding before the machine shop, 
+						for the machining of castings and then the pattern shop, for the production of polystyrene patterns. Since 2003 Fond-Stamp has included also the activity of iron castings. This production, 
+						during the 2012 and 2013, has been significantly enlarged and modernized with major investments. Throughout the years Fond-Stamp has focused its efforts on the market needs, in order 
+						to become a Partner able to provide an efficient and wide-range service and above all to guarantee assistance, reliability and quick response time. </p>
+						<p>For this reason, with more than 45-years experience, Fond-Stamp is now able to supply the following four production fields:
+						<br>• Construction of polystyrene patterns
+						<br>• Cast iron castings
+						<br>• Steel castings
+						<br>• Machining on castings
+						<br>All those activities are guaranteed and held by high-level technical and management competence.</p>
+						<p>Among the most recent developments, it is important to highlight the newborn partnership with Fonderia di Torbole. This evolution can ensure synergies and it strengthens the company’s position on the market by sharing expertise
+						and common goals. Fonderia di Torbole and Fond-Stamp, although with different structures and productions, are two companies whose core-business is moulding. This allows a joint-venture intended for a very successful cooperation.</p>
+						<p><img class="little_triangles" alt="" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
+						<strong><a class="{{pagina}}" href="javascript:open_map();">COME RAGGIUNGERCI</a></strong></p>
+					{% else %}{% if LANGUAGE_CODE == "fr" %}
+					{% else %}{% if LANGUAGE_CODE == "de" %}
+					{% else %}
+						<p>La Fond-Stamp è specializzata nella produzione di getti in ghisa ed acciaio ottenuti da modelli in polistirolo a perdere ed è oggi considerata una fra le aziende leader in questo settore.
+						<br>L’azienda nasce nel 1967 come fonderia di getti in ghisa destinati al settore macchine utensili e stampi carrozzeria per l’industria Automotive.</p>
+						<p>Nel corso degli anni, pur conservando nell’attività fusoria il proprio core business, la Fond-Stamp ha deciso di ampliare le proprie competenze inserendo prima l’officina per le lavorazioni meccaniche sui getti ed in 
+						seguito la modelleria per la produzione di modelli in polistirolo a perdere. A completamento di questa evoluzione, nel 2003 è stata avviata la nuova fonderia per la produzione di fusioni  in acciaio. Questo reparto produttivo 
+						è stato recentemente oggetto di importanti investimenti iniziati nel 2012 e portati a termine nel 2013, che ne hanno permesso un considerevole ampliamento, sia in termini di superficie operativa che di capacità.</p>
+						<p>Pertanto oggi, con una presenza sul mercato di oltre 45 anni, la FondStamp si propone quale interlocutore esperto e versatile, in grado di offrire quattro diversi tipi di produzioni quali:
 						<br>• costruzione modelli in polistirolo
 						<br>• fusioni in ghisa
 						<br>• fusioni in acciaio
 						<br>• lavorazioni meccaniche sui getti 
 						<br>il tutto garantito e supportato da competenza tecnica e gestionale di altissimo livello.
-						<br>L’esperienza maturata nel corso degli 
-						anni, unitamente all’utilizzo delle più 
-						moderne e sofisticate tecnologie, ha 
-						permesso all’azienda di acquisire uno 
-						specifico know-how, che le consente 
-						di mettere in atto le più diversificate 
-						soluzioni produttive. 
-						</p>
-						<p>La recente partnership con la Fonderia di Torbole e tutti gli importanti 
-						investimenti che l’hanno caratterizzata, rappresentano per l’azienda uno 
-						degli sviluppi più significativi avvenuti 
-						negli ultimi anni. Fonderia di Torbole e Fond-Stamp infatti, pur essendo 
-						due realtà ben distinte e indipendenti, 
-						fondano la propria joint-venture su un 
-						denominatore comune dalle grandi 
-						potenzialità, il core business comune 
-						costituito dall’attività fusoria.
-						</p>
+						<br>L’esperienza maturata nel corso degli anni, unitamente all’utilizzo delle più moderne e sofisticate tecnologie, ha permesso all’azienda di acquisire uno specifico know-how, che le consente di mettere in atto le più diversificate soluzioni produttive.</p>
+						<p>La recente partnership con la Fonderia di Torbole e tutti gli importanti investimenti che l’hanno caratterizzata, rappresentano per l’azienda uno degli sviluppi più significativi avvenuti negli ultimi anni. Fonderia di Torbole e Fond-Stamp infatti, pur essendo 
+						due realtà ben distinte e indipendenti, fondano la propria joint-venture su un denominatore comune dalle grandi potenzialità, il core business comune costituito dall’attività fusoria.</p>
 						<p><img class="little_triangles" alt="" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
-						<strong><a class="{{pagina}}" href="javascript:open_map();">COME RAGGIUNGERCI</a></strong>
-						</p>
+						<strong><a class="{{pagina}}" href="javascript:open_map();">COME RAGGIUNGERCI</a></strong></p>
+					{% endif %}{% endif %}{% endif %}
 					</div>
 					<div id="google-map-modal" class="modal invisible fade" style="width:562px; height:562px; top: 20px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-header">

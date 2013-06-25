@@ -2,6 +2,34 @@
 {% load i18n %}
 
 {% block inner_markup %}
+					{% if LANGUAGE_CODE == "en" %}
+					<div class="row title {{pagina}}">
+						<img class="triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_acciaio.jpg">
+						PRODUCTION OF STEEL CASTINGS
+					</div>
+					<div class="row two-columns">
+						<p>This production started in 2003 and 
+						includes a wide range of steels with 
+						applications in many different sectors. 
+						At the beginning of 2013 was completed 
+						a major enlargement of the production area.</p>
+						<p>The foundry is well equipped to perform 
+						heat treatments, rough chipping, finishing 
+						and painting on its steel castings. 
+						Fond-Stamp carries out on castingsheat treatment 
+						of annealing, normalizing and tempering.</p>
+						<br>
+						<div class="little_title {{pagina}}">
+							<img class="little_triangles" alt="Acciaio" src="{{ STATIC_URL }}img/triangoli/triangoli_acciaio.jpg">
+							STEEL FOUNDRY
+						</div>
+						<p>No. 4 induction furnaces , production of steel castings by using wood models as well
+						as lost-foam polystyrene patterns , with a maximum weight of 7,5 Tons per piece.</p>
+						<p><b>Production capacity available: 1.100 Tons/year.</b></p>
+					</div>
+					{% else %}{% if LANGUAGE_CODE == "fr" %}
+					{% else %}{% if LANGUAGE_CODE == "de" %}
+					{% else %}
 					<div class="row title {{pagina}}">
 						<img class="triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_acciaio.jpg">
 						FONDERIA GETTI IN ACCIAIO
@@ -14,24 +42,23 @@
 						che hanno permesso un importante
 						ampliamento dell’area produttiva,
 						che ha visto aumentare considerevolmente
-						le proprie potenzialità.
-						</p>
+						le proprie potenzialità.</p>
 						<p>La fonderia acciaio è dotata di 
 						attrezzature in grado di eseguire 
 						trattamenti termici, sbavatura, finitura e
 						verniciatura dei getti. La Fond-Stamp
 						opera sui getti in acciaio trattamenti
 						termici di ricottura, normalizzazione e
-						bonifica.
+						bonifica.</p>
 						<br>
 						<div class="little_title {{pagina}}">
 							<img class="little_triangles" alt="Acciaio" src="{{ STATIC_URL }}img/triangoli/triangoli_acciaio.jpg">
 							FONDERIA ACCIAIO
 						</div>
-						Nr. 4 forni induzione, Getti in acciaio prodotti da modelli in legno ed in polistirolo
-						a perdere, fino ad un peso di 7,5 Tonnellate a getto (peso spedito).
-						</p>
-						<p><b>Capacità di Produzione: 1.100 Tonnellate / anno</b></p>
+						<p>Nr. 4 forni induzione, Getti in acciaio prodotti da modelli in legno ed in polistirolo
+						a perdere, fino ad un peso di 7,5 Tonnellate a getto (peso spedito).</p>
+						<p><b>Capacità di Produzione: 1.100 Tonnellate / anno.</b></p>
 					</div>
+					{% endif %}{% endif %}{% endif %}
 					<div class="row" style="margin-top: 10%;"><a class="preview" href="{{ STATIC_URL }}img/schemi/schema_acciaio.jpg" title="Schematizzazione."><img src="{{ STATIC_URL }}img/schemi/schema_acciaio.jpg"/></a></div>
 {% endblock %}

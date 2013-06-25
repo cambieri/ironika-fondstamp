@@ -2,6 +2,39 @@
 {% load i18n %}
 
 {% block inner_markup %}
+					{% if LANGUAGE_CODE == "en" %}
+					<div class="row title {{pagina}}">
+						<img class="triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_ghisa.jpg">
+						PRODUCTION OF CAST IRON FOUNDRY
+					</div>
+					<div class="row two-columns">
+						<p>The cast iron foundry is specialized
+						in the production of castings made
+						of polystyrene patterns (lost foam).
+						The company has step by step op-
+						timized this technology and is now
+						able to fulfil the increasing require-
+						ments of its international customers.</p>
+						<p>To production process is supported by the software MAGMASOFT, that
+						thanks to the simulation of the filling and the solidification phase of
+						the metal, suggests the best solutions aimed to guarantee the quality
+						standards required.</p>
+						<p>Moreover, for the production of ductile iron, alloyed and unalloyed, 
+						sophisticated new equipments permit the continuous inspection and monitoring 
+						of the production process, while ensuring compliance with environmental and ecological rules.
+						<br></p>
+						<div class="little_title {{pagina}} hanging-indent">
+							<img class="little_triangles" alt="Ghisa" src="{{ STATIC_URL }}img/triangoli/triangoli_ghisa.jpg">
+							CAST IRON FOUNDRY
+							<br>(GREY IRON AND SPHEROIDAL, ALLOYED AND UNALLOYED)
+						</div>
+						<p>No. 2 electric furnaces, production of Cast iron castings (grey and spheroidal, alloyed
+						and unalloyed) made of lost-foam polystyrene patterns, with a maximum weight of 25 Tons per piece.</p>
+						<p><b>Production capacity available: 10.000 Tons/year.</b></p>
+					</div>
+					{% else %}{% if LANGUAGE_CODE == "fr" %}
+					{% else %}{% if LANGUAGE_CODE == "de" %}
+					{% else %}
 					<div class="row title {{pagina}}">
 						<img class="triangles" alt="Modelli" src="{{ STATIC_URL }}img/triangoli/triangoli_ghisa.jpg">
 						FONDERIA GETTI IN GHISA
@@ -11,26 +44,24 @@
 						ricavati da modelli in polistirolo a perdere (lost foam).
 						L’azienda ha costantemente perfezionato questa tecnologia 
 						ed oggi è in grado di soddisfare le sempre più esigenti 
-						richieste della propria clientela internazionale.
-						</p>
+						richieste della propria clientela internazionale.</p>
 						<p>A supporto dell’attività di formatura
 						viene utilizzato il software MAGMA-SOFT che, simulando 
 						la fase di riempimento e successiva solidificazione del getto, 
-						indica le migliori soluzioni utili per garantire gli standard qualitativi previsti.
-						</p>
+						indica le migliori soluzioni utili per garantire gli standard qualitativi previsti.</p>
 						<p>Inoltre, per la produzione di ghise sferoidali, 
 						legate e non legate, nuove sofisticate attrezzature consentono 
 						un monitoraggio costante del processo produttivo, garantendo 
 						al tempo stesso il rispetto e la tutela delle norme ecologiche ed ambientali.
-						<br>
+						<br></p>
 						<div class="little_title {{pagina}} hanging-indent">
 							<img class="little_triangles" alt="Ghisa" src="{{ STATIC_URL }}img/triangoli/triangoli_ghisa.jpg">
 							FONDERIA GHISA GRIGIA E SFEROIDALE, LEGATA E NON LEGATA
 						</div>
-						Nr. 2 forni elettrici, Getti in ghisa (Grigia e Sferoidale, legata e non legata) prodotti 
-						da modelli in polistirolo a perdere, fino ad un peso max. di 25 Tonnellate a getto (peso spedito).
-						</p>
-						<p><b>Capacità di Produzione: 10.000 Tonnellate/anno</b></p>
+						<p>Nr. 2 forni elettrici, Getti in ghisa (Grigia e Sferoidale, legata e non legata) prodotti 
+						da modelli in polistirolo a perdere, fino ad un peso max. di 25 Tonnellate a getto (peso spedito).</p>
+						<p><b>Capacità di Produzione: 10.000 Tonnellate/anno.</b></p>
 					</div>
+					{% endif %}{% endif %}{% endif %}
 					<div class="row" style="margin-top: 6%;"><a class="preview" href="{{ STATIC_URL }}img/schemi/schema_ghisa.jpg" title="Schematizzazione."><img src="{{ STATIC_URL }}img/schemi/schema_ghisa.jpg"/></a></div>
 {% endblock %}
