@@ -4,11 +4,23 @@
 {% block inner_markup %}
 					<div class="row secondary-menu title {{pagina}}">
 						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
-						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#staff').hide(); $('#certificazioni').hide(); $('#clienti').show();">CLIENTI</a>
+						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#staff').hide(); $('#certificazioni').hide(); $('#clienti').show();">
+						{% if LANGUAGE_CODE == "en" %}CLIENTS
+						{% else %}{% if LANGUAGE_CODE == "fr" %}CLIENTS
+						{% else %}{% if LANGUAGE_CODE == "de" %}HAUPTKUNDEN
+						{% else %}CLIENTI{% endif %}{% endif %}{% endif %}</a>
 						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
-						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#certificazioni').hide(); $('#staff').show();">STAFF</a>
+						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#certificazioni').hide(); $('#staff').show();">
+						{% if LANGUAGE_CODE == "en" %}STAFF
+						{% else %}{% if LANGUAGE_CODE == "fr" %}PERSONNEL
+						{% else %}{% if LANGUAGE_CODE == "de" %}PERSONAL
+						{% else %}STAFF{% endif %}{% endif %}{% endif %}</a>
 						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
-						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#staff').hide(); $('#certificazioni').show();">CERTIFICAZIONI</a>
+						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#staff').hide(); $('#certificazioni').show();">
+						{% if LANGUAGE_CODE == "en" %}CERTIFICATIONS
+						{% else %}{% if LANGUAGE_CODE == "fr" %}CERTIFICATIONS
+						{% else %}{% if LANGUAGE_CODE == "de" %}ZERTIFIZIERUNGEN
+						{% else %}CERTIFICAZIONI{% endif %}{% endif %}{% endif %}</a>
 					</div>
 					<div class="row two-columns">
 					{% if LANGUAGE_CODE == "en" %}
@@ -50,6 +62,21 @@
 						<p><img class="little_triangles" alt="" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
 						<strong><a class="{{pagina}}" href="javascript:open_map();">COMMENT NOUS REJOINDRE</a></strong></p>
 					{% else %}{% if LANGUAGE_CODE == "de" %}
+						<p>Fond-Stamp S.p.A. ist auf die Anfertigung von Guss und Stahlguss aus „lost-foam“ Styropormodelle spezialisiert und wird heute als eines der führenden Unternehmen in diesem Sektor geschätzt.
+						<br>Das Unternehmen wurde im 1967 gegründet und die Giesserei belieferte besonders die Maschinenindustrie, dann später auch die Automobilindustrie.</p>
+						<p>Im Laufe der Jahre hat dauernd Fond-Stamp seine Kompetenz ins Schmelzen verbessert und implementiert und immer unter Berücksichtigung des Schmelzen als „core-business“, hat zwei ergänzende Abteilungen hinzugefügt: 
+						früher die Mechanische Werkstatt für die Bearbeitungen an Gussteile und dann einen Modellbau für die Anfertigung von Styropormodelle („lost-foam“). Im Bereich dieser Entwicklung wurde im Jahr 2003 die neue Gießerei 
+						für die Herstellung von Stahlguss gestartet. Diese Produktionsabteilung wurde kürzlich, danke erheblichen Investitionen, eingeleitet im Jahr 2012 und fertiggestellt im Jahr 2013, viel erweitert und renoviert. Daher stellt sich heute Fa.</p>
+						<p>Fond-Stamp, danke mehr als 45 Jahre Erfahrung, wie einen zuverlässigen Partner vor und in der Lage vier verschieden Leistungen anzubieten:
+						<br>• Styropormodellanfertigung
+						<br>• Gussanfertigung (Grau-und Sphäroguss)
+						<br>• Stahlgussanfertigung
+						<br>• Mechanische Bearbeitungen
+						<br>mit der Garantie und Unterstützung von einer Kompetenz auf dem höchsten technischen Niveau.</p>
+						<p>Die Herstellungstechnik im Laufe der Jahre wurde mit der neuesten Technologien entwickelt und durch ein spezifisches Know-how ermöglicht unterschiedliche Produktionen. Die Partnerschaft mit Fa. Fonderia di Torbole ist eine der neuste Entwicklungen zu melden. Die Gießereien Fonderia
+						di Torbole und Fond-Stamp, trotz die verschiedene Produktionen und Strukturen, sind jedoch zwei Betriebe, deren Hauptkerngeschäft in den Schmelzen besteht und diese Kooperation stellt ein wichtiges Potential dar.</p>
+						<p><img class="little_triangles" alt="" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
+						<strong><a class="{{pagina}}" href="javascript:open_map();">ANFAHRT</a></strong></p>
 					{% else %}
 						<p>La Fond-Stamp è specializzata nella produzione di getti in ghisa ed acciaio ottenuti da modelli in polistirolo a perdere ed è oggi considerata una fra le aziende leader in questo settore.
 						<br>L’azienda nasce nel 1967 come fonderia di getti in ghisa destinati al settore macchine utensili e stampi carrozzeria per l’industria Automotive.</p>
@@ -189,11 +216,11 @@
 								<div>Paolo Godano<br><img src="{{ STATIC_URL }}img/staff/qualita_2.jpg"></div></li>
 							</ul>
 							<ul class="staff"><li><b>Commerciale:</b><br>
-								<div>Luciana Massano<br>(ITA/FRA)<br><img src="{{ STATIC_URL }}img/staff/stc_1.jpg"></div>
-								<div>Federica Cravero<br>(ITA/TED/INGL)<br><img src="{{ STATIC_URL }}img/staff/stc_2.jpg"></div>
+								<div>Luciana Massano<br>(IT/FR)<br><img src="{{ STATIC_URL }}img/staff/stc_1.jpg"></div>
+								<div>Federica Cravero<br>(IT/DE/EN)<br><img src="{{ STATIC_URL }}img/staff/stc_2.jpg"></div>
 								<p></p>
-								<div>Alessia Raviola<br>(ITA/FRA/SPA)<br><img src="{{ STATIC_URL }}img/staff/stc_3.jpg"></div>
-								<div>Claudia Ferrero<br>(ITA/TED//FRA/INGL)<br><img src="{{ STATIC_URL }}img/staff/stc_4.jpg"></div></li>
+								<div>Alessia Raviola<br>(ITA/FR/SP)<br><img src="{{ STATIC_URL }}img/staff/stc_3.jpg"></div>
+								<div>Claudia Ferrero<br>(ITA/DE/FR/EN)<br><img src="{{ STATIC_URL }}img/staff/stc_4.jpg"></div></li>
 							</ul>
 							<ul class="staff" style="margin-top: -3px"><li><b>Modelleria:</b><br>Luca Cusanno<br><img src="{{ STATIC_URL }}img/staff/modelleria.jpg"></li></ul>
 							<ul class="staff"><li><b>Fonderia ghisa:</b><br>Marco Salvatico<br><img src="{{ STATIC_URL }}img/staff/ghisa.jpg"></li></ul>
@@ -202,7 +229,7 @@
 							<ul class="staff"><li><b>Fonderia acciaio:</b><br>Angelo Bernardi<br><img src="{{ STATIC_URL }}img/staff/acciaio.jpg"></li></ul>
 							<ul class="staff"><li><b>Officina:</b><br>Sergio Beatovic<br><img src="{{ STATIC_URL }}img/staff/officina.jpg"></li></ul>
 							<ul class="staff"><li><b>Manutenzione:</b><br>Massimo Capellano<br><img src="{{ STATIC_URL }}img/staff/manutenzione.jpg"></li></ul>
-							<ul class="staff"><li><b>Ricerca & sviluppo:</b><br>Ufficio tecnico<br><img src="{{ STATIC_URL }}img/staff/unknown.jpg"></li></ul>
+							<ul class="staff"><li><b>Ricerca &amp; sviluppo:</b><br>Ufficio tecnico<br><img src="{{ STATIC_URL }}img/staff/unknown.jpg"></li></ul>
 						</div>
 					</div>
 					<div id="certificazioni" class="azienda" style="display: none;">
