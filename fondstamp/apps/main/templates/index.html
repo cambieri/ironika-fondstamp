@@ -63,3 +63,13 @@
 {{ block.super }}
 {% endblock %}
 {# end of content #}
+
+{% block js %}
+{{ block.super }}
+		<script type="text/javascript">
+			function readyFn( jQuery ) {
+				$('body').css('background-color', 'black');
+			}
+			$(document).ready(readyFn);
+		</script>
+{% endblock %}

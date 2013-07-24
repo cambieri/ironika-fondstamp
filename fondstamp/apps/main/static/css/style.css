@@ -97,7 +97,16 @@ a.azienda:HOVER { color: #9D9D9D !important; }
 	-moz-column-gap:30px; /* Firefox */
 	-webkit-column-gap:30px; /* Safari and Chrome */
 	column-gap:30px;
+	
+	/* Evitare separazione paragrafi e elenchi */
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	-o-column-break-inside: avoid;
+	column-break-inside: avoid;
 }
+/* .two-columns p {
+	display: table;
+} */
 .hanging-indent {
 	text-indent: -54px;
 	padding-left: 54px;
