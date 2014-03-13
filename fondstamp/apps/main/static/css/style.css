@@ -19,20 +19,36 @@ a:ACTIVE, a:FOCUS, a:VISITED {
 	color: inherit;
 }
 
+#staff {
+	overflow: hidden;
+	/* margin-top: -4px;
+	margin-left: -12px; */
+}
+
 ul.staff {
+	display: table-cell;
 	list-style-image: url("../img/triangoli/triangolo_singolo_azienda.jpg");
 	font-size: 11px;
 	margin-top: 14px;
+	padding: 7px 20px;
 }
-.staff div {
-	display: inline-block;
+
+#staff li {
+	line-height: 10px;
 }
+
+/* #staff img {
+	width: 150px;
+	height: 120px;
+} */
+
 ul.nazione {
 	list-style-image: url("../img/triangoli/triangolo_singolo_azienda.jpg");
 	font-size: 12px;
 	font-weight: bold;
 	margin: 2px 13px;
 }
+
 ul.citta {
 	list-style-image: none;
 	list-style-type: none;
@@ -166,25 +182,6 @@ div.pp_default .pp_content {
 	height: 550px;
 }
 
-#staff {
-	overflow: hidden;
-	margin-top: -4px;
-	margin-left: -12px;
-}
-#staff-col-1 {
-	width: 28%;
-}
-#staff-col-2 {
-	width: 47%;
-}
-#staff-col-3 {
-	width: 25%;
-}
-#staff li {
-	line-height: 12px;
-}
-
-
 /* RESPONSIVE */
 
 /* Large desktop */
@@ -201,11 +198,9 @@ div.pp_default .pp_content {
 	ul.nazione { font-size: 14px; margin: 13px; }
 	ul.citta { font-size: 12px; }
 	#cartina-clienti { height: auto; }
-	#staff { margin-top: 40px; }
-	#staff li { line-height: 14px; }
-	#staff-col-1 { width: 32%; }
-	#staff-col-2 { width: 48%; }
-	#staff-col-3 { width: 20%; }
+	#staff { margin-top: 10px; }
+	#staff li { line-height: 12px; }
+	ul.staff { padding: 10px 20px; }
 }
 
 

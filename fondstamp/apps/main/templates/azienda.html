@@ -10,14 +10,11 @@
 						{% else %}{% if LANGUAGE_CODE == "de" %}HAUPTKUNDEN
 						{% else %}CLIENTI{% endif %}{% endif %}{% endif %}</a>
 						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
-						<!-- <a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#certificazioni').hide(); $('#staff').show();"> -->
-						<span class="{{pagina}}" style="margin-right: 40px;">
+						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#certificazioni').hide(); $('#staff').show();">
 						{% if LANGUAGE_CODE == "en" %}STAFF
 						{% else %}{% if LANGUAGE_CODE == "fr" %}PERSONNEL
 						{% else %}{% if LANGUAGE_CODE == "de" %}PERSONAL
-						{% else %}STAFF{% endif %}{% endif %}{% endif %}
-						</span>
-						<!-- </a> -->
+						{% else %}STAFF{% endif %}{% endif %}{% endif %}</a>
 						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
 						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#clienti').hide(); $('#staff').hide(); $('#certificazioni').show();">
 						{% if LANGUAGE_CODE == "en" %}CERTIFICATIONS
@@ -206,33 +203,38 @@
 						</div>
 					</div>
 					<div id="staff" class="azienda" style="display: none;">
-						<div id="staff-col-1" style="float: left;">
-							<ul class="staff"><li><b>Presidente:</b><br>Armando Tosello<br><img src="{{ STATIC_URL }}img/staff/presidente.jpg"></li></ul>
-							<ul class="staff"><li><b>Amm. delegato:</b><br>Enrico Frigerio<br><img src="{{ STATIC_URL }}img/staff/ammin_delegato.jpg"></li></ul>
-							<ul class="staff"><li><b>Dir. generale:</b><br>Giancarlo Duvina<br><img src="{{ STATIC_URL }}img/staff/direttore.jpg"></li></ul>
-							<ul class="staff"><li><b>Amministrazione:</b><br>Ornella Tomatis<br><img src="{{ STATIC_URL }}img/staff/ammin.jpg"></li></ul>
-							<ul class="staff"><li><b>Acquisti:</b><br>Daniela Tosello<br><img src="{{ STATIC_URL }}img/staff/acquisti.jpg"></li></ul>
-						</div>
-						<div id="staff-col-2" style="float: left;">
-							<ul class="staff"><li><b>Qualità:</b><br>
-								<div>Claudio Sasso<br><img src="{{ STATIC_URL }}img/staff/qualita_1.jpg"></div>
-								<div>Paolo Godano<br><img src="{{ STATIC_URL }}img/staff/qualita_2.jpg"></div></li>
-							</ul>
-							<ul class="staff"><li><b>Commerciale:</b><br>
-								<div>Luciana Massano<br>(IT/FR)<br><img src="{{ STATIC_URL }}img/staff/stc_1.jpg"></div>
-								<div>Federica Cravero<br>(IT/DE/EN)<br><img src="{{ STATIC_URL }}img/staff/stc_2.jpg"></div>
-								<p></p>
-								<div>Alessia Raviola<br>(ITA/FR/SP)<br><img src="{{ STATIC_URL }}img/staff/stc_3.jpg"></div>
-								<div>Claudia Ferrero<br>(ITA/DE/FR/EN)<br><img src="{{ STATIC_URL }}img/staff/stc_4.jpg"></div></li>
-							</ul>
-							<ul class="staff" style="margin-top: -3px"><li><b>Modelleria:</b><br>Luca Cusanno<br><img src="{{ STATIC_URL }}img/staff/modelleria.jpg"></li></ul>
-							<ul class="staff"><li><b>Fonderia ghisa:</b><br>Marco Salvatico<br><img src="{{ STATIC_URL }}img/staff/ghisa.jpg"></li></ul>
-						</div>
-						<div id="staff-col-3" style="float: right;">
-							<ul class="staff"><li><b>Fonderia acciaio:</b><br>Angelo Bernardi<br><img src="{{ STATIC_URL }}img/staff/acciaio.jpg"></li></ul>
-							<ul class="staff"><li><b>Officina:</b><br>Sergio Beatovic<br><img src="{{ STATIC_URL }}img/staff/officina.jpg"></li></ul>
-							<ul class="staff"><li><b>Manutenzione:</b><br>Massimo Capellano<br><img src="{{ STATIC_URL }}img/staff/manutenzione.jpg"></li></ul>
-							<ul class="staff"><li><b>Ricerca &amp; sviluppo:</b><br>Ufficio tecnico<br><img src="{{ STATIC_URL }}img/staff/unknown.jpg"></li></ul>
+						<div style="display: table;">
+							<div style="display: table-row;">
+								<!-- <ul class="staff"><li><b>Presidente Onorario:</b><br>Armando Tosello<br><img src="{{ STATIC_URL }}img/staff/presidente.jpg"></li></ul> -->
+								<ul class="staff"><li><b>Presidente:</b><br>Enrico Frigerio<br><img src="{{ STATIC_URL }}img/staff/frigerio.jpg"></li></ul>
+								<ul class="staff"><li><b>Dir. generale:</b><br>Giancarlo Duvina<br><img src="{{ STATIC_URL }}img/staff/duvina.jpg"></li></ul>
+								<ul class="staff"><li><b>Fonderie:</b><br>Angelo Bernardi<br><img src="{{ STATIC_URL }}img/staff/bernardi.jpg"></li></ul>
+								<ul class="staff"><li><b>Fonderia acciaio:</b><br>Paolo Bonetti<br><img src="{{ STATIC_URL }}img/staff/bonetti.jpg"></li></ul>
+							</div>
+							<div style="display: table-row;">
+								<ul class="staff"><li><b>Costruzione modelli:</b><br>Luca Cusanno<br><img src="{{ STATIC_URL }}img/staff/cusanno.jpg"></li></ul>
+								<ul class="staff"><li><b>Officina meccanica:</b><br>Danilo Andreietti<br><img src="{{ STATIC_URL }}img/staff/andreietti.jpg"></li></ul>
+								<ul class="staff"><li><b>Qualità e sicurezza:</b><br><div>Claudio Sasso<br><img src="{{ STATIC_URL }}img/staff/sasso.jpg"></div></li></ul>
+								<ul class="staff"><li><b>Qualità:</b><br><div>Paolo Godano<br><img src="{{ STATIC_URL }}img/staff/godano.jpg"></div></li></ul>
+							</div>
+							<div style="display: table-row;">
+								<ul class="staff"><li><b>Acquisti:</b><br>Romina Baudena<br><img src="{{ STATIC_URL }}img/staff/baudena.jpg"></li></ul>
+								<ul class="staff"><li><b>Amministrazione:</b><br>Ornella Tomatis<br><img src="{{ STATIC_URL }}img/staff/tomatis.jpg"></li></ul>
+								<ul class="staff"><li><b>Personale:</b><br>Daniela Tosello<br><img src="{{ STATIC_URL }}img/staff/tosello.jpg"></li></ul>
+								<ul class="staff"><li><b>Manutenzione:</b><br>Massimo Capellano<br><img src="{{ STATIC_URL }}img/staff/capellano.jpg"></li></ul>
+							</div>
+							<div style="display: table-row;">
+								<ul class="staff"><li><b>Lab. metallurgico:</b><br>Sergio Beatovic<br><img src="{{ STATIC_URL }}img/staff/beatovic.jpg"></li></ul>
+								<ul class="staff"><li><b>Area Germania:</b><br>Federica Cravero<br><img src="{{ STATIC_URL }}img/staff/cravero.jpg"></li></ul>
+								<ul class="staff"><li><b>Segr. Commerciale:</b><br><div>Luciana Massano<br><img src="{{ STATIC_URL }}img/staff/massano.jpg"></div></li></ul>
+								<ul class="staff"><li><b>Segr. Commerciale:</b><br><div>Claudia Ferrero<br><img src="{{ STATIC_URL }}img/staff/ferrero.jpg"></div></li></ul>
+							</div>
+							<div style="display: table-row;">
+								<ul class="staff"><li><b>Segr. Commerciale:</b><br><div>Alessia Raviola<br><img src="{{ STATIC_URL }}img/staff/raviola.jpg"></div></li></ul>
+								<ul class="staff"><li><b>Segr. Commerciale:</b><br><div>Erika Laconi<br><img src="{{ STATIC_URL }}img/staff/laconi.jpg"></div></li></ul>
+								<ul class="staff"><li><b>Merci e centralino:</b><br>Lucia Liboà<br><img src="{{ STATIC_URL }}img/staff/liboa.jpg"></li></ul>
+								<ul class="staff"><li><b>Merci e centralino:</b><br>Andreina Petagna<br><img src="{{ STATIC_URL }}img/staff/petagna.jpg"></li></ul>
+							</div>
 						</div>
 					</div>
 					<div id="certificazioni" class="azienda" style="display: none;">
