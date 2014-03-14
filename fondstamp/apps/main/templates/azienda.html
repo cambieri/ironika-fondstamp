@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block inner_markup %}
-					<div class="row secondary-menu title {{pagina}}">
+					<div class="row secondary-menu title {{pagina}} alza">
 						<img class="triangles" alt="Azienda" src="{{ STATIC_URL }}img/triangoli/triangolo_singolo_azienda.jpg">
 						<a class="{{pagina}}" href="javascript:void(0);" onclick="$('.two-columns').hide(); $('#staff').hide(); $('#certificazioni').hide(); $('#clienti').show();">
 						{% if LANGUAGE_CODE == "en" %}CLIENTS

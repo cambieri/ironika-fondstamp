@@ -187,6 +187,7 @@ div.pp_default .pp_content {
 /* Large desktop */
 @media (min-width: 1200px) {
 	.content { margin-top: 3%; }
+	.alza { margin-top: -8px; }
 	.language.it { top: 40px; }
 	.language.en { top: 64px; }
 	.language.fr { top: 88px; }
