@@ -66,11 +66,11 @@ def live():
 ### Fab Tasks
 
 def prepare_south():
-    with lcd('/home/workspace-django/projects/ironika-fondstamp'):
+    with lcd('~/cambieri.it/work/workspace-django/projects/ironika-fondstamp'):
         local('django-admin.py schemamigration main --initial')
 
 def prepare_git():
-    with lcd('/home/workspace-django/projects/ironika-fondstamp'):
+    with lcd('~/cambieri.it/work/workspace-django/projects/ironika-fondstamp'):
         git_create_repo_param = '{"name":"ironika-fondstamp"}'
         git_create_repo = "curl -u 'cambieri' https://api.github.com/user/repos -d '{0}'".format(git_create_repo_param)
         local(git_create_repo)
@@ -102,9 +102,9 @@ def prepare_server():
         run('ln -s {0}hosting/nginx/virtualhost-{1}.conf /etc/nginx/sites-enabled/{2}.conf'.format(site_root, env.environment, site_dir_name))	
 
 def prepare_deploy():
-    with lcd('/home/workspace-django/projects/ironika-fondstamp/fondstamp'):
+    with lcd('~/cambieri.it/work/workspace-django/projects/ironika-fondstamp/fondstamp'):
         local("python ./manage.py test main")
-    with lcd('/home/workspace-django/projects/ironika-fondstamp'):
+    with lcd('~/cambieri.it/work/workspace-django/projects/ironika-fondstamp'):
         local('git checkout master')
         local('django-admin.py migrate')
         with settings(warn_only = True):
